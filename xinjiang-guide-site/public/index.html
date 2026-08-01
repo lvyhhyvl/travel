@@ -326,49 +326,105 @@
 
     @media (max-width: 680px) {
       .container { width: min(100% - 24px, 1180px); }
-      .hero { min-height: 76vh; background-position: 61% center; }
-      .hero-content { padding: 62px 0 70px; }
-      h1 { font-size: 50px; }
+      .hero { min-height: 72vh; background-position: 61% center; }
+      .hero-content { padding: 58px 0 64px; }
+      h1 { font-size: clamp(40px, 13vw, 52px); letter-spacing: -.03em; }
+      .hero-lead { font-size: clamp(15px, 4.4vw, 18px); }
+      .hero-meta { gap: 8px; }
+      .hero-chip { padding: 7px 11px; font-size: 12px; }
       .photo-credit { display: none; }
       .nav-brand { display: none; }
-      .nav-inner { gap: 17px; }
+      .nav-inner { gap: 14px; min-height: 52px; }
+      .nav-inner a { padding: 14px 2px; font-size: 13px; }
       .facts { padding-top: 16px; }
       .facts-grid { grid-template-columns: 1fr 1fr; }
       .fact, .fact:nth-child(3) { border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
       .fact:nth-child(even) { border-right: 0; }
       .fact:last-child { grid-column: 1 / span 2; border-bottom: 0; }
+      .fact strong { font-size: 25px; }
       .section { padding-top: 56px; }
       .section-head { grid-template-columns: 1fr; gap: 12px; }
-      h2 { font-size: 37px; }
-      .map-toolbar strong { width: 100%; }
-      #routeMap { height: 470px; }
+      h2 { font-size: 34px; }
+      .section-intro { font-size: 14px; }
+      .map-toolbar { padding: 14px 16px; gap: 8px; }
+      .map-toolbar strong { width: 100%; margin-bottom: 2px; }
+      .map-btn { padding: 10px 13px; font-size: 13px; }
+      #routeMap { height: 460px; }
+      .map-side { padding: 16px; }
+      .map-side h3 { font-size: 16px; }
+      .day-map-item { padding: 13px 12px; }
+      .map-note { padding: 11px 16px; font-size: 11px; }
+      .route-strip { padding: 15px 16px; font-size: 13px; }
       .day-map-list { grid-template-columns: 1fr; }
       .gallery { display: block; }
-      .gallery figure { height: 250px; margin-bottom: 12px; }
+      .gallery figure { height: 230px; margin-bottom: 12px; }
       .day-card { grid-template-columns: 1fr; }
-      .day-date { display: flex; gap: 12px; align-items: center; padding: 18px 22px; }
-      .day-date .d { font-size: 28px; }
-      .day-date .w { margin: 0; }
-      .day-date button { margin: 0 0 0 auto; }
-      .day-content { padding: 22px; }
-      .day-photo { height: 190px; }
+      .day-date { display: flex; gap: 12px; align-items: center; padding: 16px 20px; }
+      .day-date .d { font-size: 26px; }
+      .day-date .w { margin: 0; font-size: 12px; }
+      .day-date button { margin: 0 0 0 auto; padding: 8px 12px; }
+      .day-content { padding: 20px; }
+      .day-content h3 { font-size: 22px; }
+      .day-photo { height: 180px; }
       .day-photo figcaption { align-items: start; flex-direction: column; gap: 2px; }
+      .day-photo figcaption strong { font-size: 14px; }
+      .day-photo figcaption span { white-space: normal; }
+      .timeline li { font-size: 14px; }
       .day-cols { grid-template-columns: 1fr; gap: 14px; }
       .day-aside { border-left: 0; border-top: 1px solid var(--line); padding: 14px 0 0; }
       .food-grid, .check-grid { grid-template-columns: 1fr; }
+      .food { min-height: 180px; padding: 20px; }
       .packing-grid, .rescue-grid { grid-template-columns: 1fr; }
+      .stay-panel { padding: 20px; }
+      .stay-row { grid-template-columns: 74px 1fr; }
+      .stay-row b:last-child { grid-column: 2; }
       .budget-banner { grid-template-columns: 1fr; }
+      .budget-stat { padding: 20px; }
+      .budget-stat strong { font-size: 24px; }
+      th, td { padding: 12px 13px; font-size: 13px; }
+      table { min-width: 640px; }
+      .weather-table td:nth-child(3) { min-width: 180px; }
+      .phone-card { padding: 15px 13px; }
+      .phone-card strong { font-size: 22px; }
+      .phone-grid { gap: 10px; }
       .reference { grid-template-columns: 1fr; }
-      .reference img { max-height: 330px; }
+      .reference img { max-height: 300px; }
       .footer-grid { grid-template-columns: 1fr; }
-      .day-dialog { width: calc(100% - 16px); max-height: 96vh; border-radius: 18px; }
-      .dialog-head { padding: 16px; }
-      .dialog-head h3 { font-size: 20px; }
+      .day-dialog { width: calc(100% - 12px); max-height: 96vh; border-radius: 16px; }
+      .dialog-head { padding: 14px 16px; gap: 12px; }
+      .dialog-head h3 { font-size: 19px; }
+      .dialog-close { width: 40px; height: 40px; }
       .dialog-body { padding: 14px; }
-      .detail-gallery { grid-template-columns: 1fr 1fr; grid-template-rows: 220px 140px; }
+      .detail-gallery { grid-template-columns: 1fr 1fr; grid-template-rows: 190px 120px; gap: 8px; }
       .detail-gallery figure:first-child { grid-column: 1 / span 2; grid-row: auto; }
-      .detail-overview { grid-template-columns: 1fr; }
-      .detail-schedule li { grid-template-columns: 74px 1fr; }
+      .detail-overview { grid-template-columns: 1fr; gap: 14px; }
+      .detail-panel { padding: 16px; }
+      .detail-schedule li { grid-template-columns: 64px 1fr; gap: 8px; font-size: 13px; }
+      .photo-tips { padding: 14px; font-size: 13px; }
+      footer { padding: 34px 0; }
+      footer h3 { font-size: 19px; }
+    }
+
+    @media (max-width: 400px) {
+      .container { width: min(100% - 16px, 1180px); }
+      .hero { min-height: 68vh; }
+      h1 { font-size: 38px; }
+      .hero-content { padding: 52px 0 58px; }
+      .facts-grid { grid-template-columns: 1fr 1fr; }
+      .fact { padding: 20px 14px; }
+      .fact strong { font-size: 23px; }
+      .fact span { font-size: 12px; }
+      .map-btn { padding: 9px 11px; font-size: 12px; }
+      .phone-grid { grid-template-columns: 1fr 1fr; }
+      .phone-card strong { font-size: 20px; letter-spacing: -.02em; }
+      .gallery figure { height: 200px; }
+      .day-date { padding: 14px 16px; }
+      .day-date .d { font-size: 23px; }
+      .day-content { padding: 17px; }
+      .day-photo { height: 165px; }
+      .detail-gallery { grid-template-rows: 165px 105px; }
+      .dialog-head h3 { font-size: 17px; }
+      .checklist li, .weather-item { font-size: 13px; }
     }
 
     @media print {
@@ -456,7 +512,7 @@
           <div class="map-grid">
             <div id="routeMap" role="application" aria-label="北疆自驾路线交互地图"></div>
             <aside class="map-side">
-              <h3>7段自驾路书</h3>
+              <h3>8段自驾路书</h3>
               <p>点选日期，地图将缩放到对应路段。</p>
               <div class="day-map-list" id="dayMapList"></div>
               <div class="map-legend"><span>● 住宿</span><span>● 景点</span><span>● 加油</span><span>● 服务区</span></div>
