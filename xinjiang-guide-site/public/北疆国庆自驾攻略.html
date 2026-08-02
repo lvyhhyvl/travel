@@ -159,6 +159,18 @@
     .poi-hotel { background: #173f32; }
     .poi-fuel { background: #a54b32; }
     .poi-service { background: #2d7f8b; }
+    .poi-label {
+      font-size: 12px; font-weight: 600; color: #173f32; white-space: nowrap;
+      background: rgba(255,253,248,.92); border: 1px solid rgba(23,63,50,.22);
+      border-radius: 999px; padding: 2px 8px; box-shadow: 0 2px 8px rgba(0,0,0,.12);
+      line-height: 1.5;
+    }
+    .poi-popup { max-width: 260px; }
+    .poi-popup-head { display: flex; align-items: center; gap: 7px; }
+    .poi-popup-head strong { font-size: 15px; color: #173f32; }
+    .poi-popup-dot { width: 10px; height: 10px; border-radius: 50%; flex: 0 0 auto; }
+    .poi-popup-tag { display: inline-block; margin-top: 5px; padding: 2px 9px; border-radius: 999px; background: rgba(226,173,79,.16); color: #8a5a1d; font-size: 11px; }
+    .poi-popup p { margin: 8px 0 0; font-size: 13px; color: #4d5a53; }
 
     .route-strip { margin-top: 22px; padding: 18px 20px; background: var(--card); border: 1px solid var(--line); border-radius: 18px; }
     .route-strip strong { color: var(--forest); }
@@ -913,9 +925,10 @@
         viewMode: '2D',
         zoom: 5,
         center: [85.1, 45.7],
-        mapStyle: 'amap://styles/whitesmoke',
+        mapStyle: 'amap://styles/normal',
         scrollWheel: false,
-        showLabel: true
+        showLabel: true,
+        features: ['bg', 'road', 'building', 'point']
       });
       AMap.plugin(['AMap.ToolBar', 'AMap.Scale'], () => {
         map.addControl(new AMap.ToolBar({ position: 'RT' }));
@@ -950,17 +963,27 @@
         map.add(line);
       });
 
+      const typeNames = { sight: '景点', hotel: '住宿', fuel: '加油', service: '服务区' };
+      const typeColors = { sight: '#db842e', hotel: '#173f32', fuel: '#a54b32', service: '#2d7f8b' };
       pois.forEach(p => {
         const [lng, lat] = wgs84ToGcj02(p.lng, p.lat);
         const marker = new AMap.Marker({
           position: [lng, lat],
-          content: `<div class="poi-marker poi-${p.type}"><span>${p.icon}</span></div>`,
+          content: `<div class="poi-marker poi-${p.type}" data-tip="${p.name}"><span>${p.icon}</span></div>`,
           offset: new AMap.Pixel(-14, -28),
-          zIndex: 120
+          zIndex: 120,
+          title: p.name,
+          label: {
+            content: `<div class="poi-label">${p.name}</div>`,
+            direction: 'top',
+            offset: new AMap.Pixel(0, -8)
+          }
         });
         marker.setExtData({ poi: p });
         marker.on('click', () => {
-          infoWindow.setContent(`<strong>${p.name}</strong><br>${p.note}`);
+          infoWindow.setContent(
+            `<div class="poi-popup"><div class="poi-popup-head"><span class="poi-popup-dot" style="background:${typeColors[p.type]}"></span><strong>${p.name}</strong></div><div class="poi-popup-tag">${typeNames[p.type] || ''}</div><p>${p.note}</p></div>`
+          );
           infoWindow.open(map, marker.getPosition());
         });
         poiMarkers[p.type].push(marker);
@@ -984,7 +1007,9 @@
         const path = lines[id].getPath().map(pt => [pt.getLng(), pt.getLat()]);
         map.setFitView([lines[id]], false, [60, 60, 60, 60]);
         const mid = path[Math.floor(path.length / 2)];
-        infoWindow.setContent(`<strong>${day.date}｜${day.title}</strong><br>${day.km} · 纯驾驶${day.time}`);
+        infoWindow.setContent(
+          `<div class="poi-popup"><div class="poi-popup-head"><span class="poi-popup-dot" style="background:${day.color}"></span><strong>${day.date}｜${day.title}</strong></div><div class="poi-popup-tag">${day.km} · 纯驾驶${day.time}</div></div>`
+        );
         infoWindow.open(map, mid);
       }
 
