@@ -5,9 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="2026年国庆北疆9晚自驾攻略：乌鲁木齐、阿勒泰、禾木、喀纳斯、布尔津、克拉玛依、赛里木湖。" />
   <title>2026 北疆秋日环线｜4人自驾完整攻略</title>
-  <link rel="preconnect" href="https://unpkg.com" />
-  <link rel="preconnect" href="https://tile.openstreetmap.org" />
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
+  <link rel="preconnect" href="https://webapi.amap.com" />
+  <link rel="preconnect" href="https://amappc.cn-hangzhou.aliyuncs.com" />
   <style>
     :root {
       --ink: #17211d;
@@ -152,9 +151,9 @@
     .day-map-item span { display: block; margin-top: 3px; color: rgba(255,255,255,.62); font-size: 11px; }
     .map-legend { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 16px; font-size: 12px; color: rgba(255,255,255,.74); }
     .map-note { padding: 13px 18px; color: rgba(255,255,255,.66); background: rgba(0,0,0,.14); font-size: 12px; }
-    .leaflet-popup-content { line-height: 1.55; margin: 13px 15px; }
-    .leaflet-popup-content strong { color: #173f32; }
-    .poi-marker { display: grid; place-items: center; width: 29px; height: 29px; border-radius: 50% 50% 50% 7px; transform: rotate(-45deg); color: #fff; border: 2px solid #fff; box-shadow: 0 4px 12px rgba(0,0,0,.28); font-size: 14px; }
+    .amap-info-content { line-height: 1.55; font-size: 13px; }
+    .amap-info-content strong { color: #173f32; }
+    .poi-marker { display: grid; place-items: center; width: 29px; height: 29px; border-radius: 50% 50% 50% 7px; transform: rotate(-45deg); color: #fff; border: 2px solid #fff; box-shadow: 0 4px 12px rgba(0,0,0,.28); font-size: 14px; background: var(--forest); }
     .poi-marker span { transform: rotate(45deg); }
     .poi-sight { background: #db842e; }
     .poi-hotel { background: #173f32; }
@@ -444,7 +443,7 @@
     <div class="container hero-content">
       <span class="eyebrow">2026 · GOLDEN NORTH XINJIANG</span>
       <h1>北疆秋日环线</h1>
-      <p class="hero-lead">4人 · 两组情侣 · 2名司机｜9月25日深夜抵达，10月4日15:00返程。把禾木与喀纳斯放在国庆客流高峰前，沿阿勒泰山脉一路向西，最后在赛里木湖收尾。</p>
+      <p class="hero-lead">4人 · 两组情侣 · 2名司机｜9月25日深夜抵达，10月4日15:00返程。把禾木与喀纳斯放在国庆客流高峰前，喀纳斯住2晚从容看三湾与观鱼台；最后在赛里木湖收尾，返乌当晚逛领馆巷夜市。</p>
       <div class="hero-meta">
         <span class="hero-chip">9晚 · 8个自驾日</span>
         <span class="hero-chip">约2400公里</span>
@@ -475,7 +474,7 @@
         <div class="fact"><strong>2名</strong><span>司机轮换 · 全部登记</span></div>
         <div class="fact"><strong>9晚</strong><span>18间夜 · 每晚2间房</span></div>
         <div class="fact"><strong>≈2400 km</strong><span>S21 · G681 · G3014 · G30</span></div>
-        <div class="fact"><strong>10/3</strong><span>回乌鲁木齐并还车</span></div>
+        <div class="fact"><strong>10/3</strong><span>市区还车 · 领馆巷夜市</span></div>
       </div>
     </section>
 
@@ -486,9 +485,9 @@
           <p class="section-intro">路线不是把景点简单串起来，而是围绕季节、航班和山区风险倒推：先抢秋色、再走雅丹，最后用高速完成赛里木湖往返。</p>
         </div>
         <div class="logic-grid">
-          <article class="logic-item"><span class="logic-no">1</span><h3>秋色优先</h3><p>禾木、喀纳斯安排在9月27—29日，赶在10月1日国庆高峰前。禾木虽只住一晚，但保留傍晚炊烟和次日日出两个核心时段。</p></article>
+          <article class="logic-item"><span class="logic-no">1</span><h3>秋色优先</h3><p>禾木、喀纳斯安排在9月27—30日，赶在10月1日国庆高峰前。禾木白天游不住宿（住宿贵且评价一般），把2晚预算留给喀纳斯。</p></article>
           <article class="logic-item"><span class="logic-no">2</span><h3>闭环少回头</h3><p>乌鲁木齐向北走S21，经阿禾公路进入山区；从布尔津沿G3014南下克拉玛依，再接G30向西去赛里木湖，主线方向连续。</p></article>
-          <article class="logic-item"><span class="logic-no">3</span><h3>航班倒推</h3><p>10月4日15:00起飞，因此10月3日离开赛里木湖住回机场。10月2日在湖区完整环湖，不再赶路。返程日不安排市区购物。</p></article>
+          <article class="logic-item"><span class="logic-no">3</span><h3>航班倒推</h3><p>10月4日15:00起飞，因此10月3日离开赛里木湖回乌鲁木齐市区还车，住市区一晚并逛领馆巷夜市。返程日不安排购物。</p></article>
         </div>
       </div>
     </section>
@@ -518,7 +517,7 @@
               <div class="map-legend"><span>● 住宿</span><span>● 景点</span><span>● 加油</span><span>● 服务区</span></div>
             </aside>
           </div>
-          <div class="map-note">地图底图 © OpenStreetMap contributors，地点均使用中文名称。线路用于总览，不代表逐弯导航；实际道路、阿禾开放状态、景区交通和服务区营业情况仍以高德实时导航及“新疆路网”为准。</div>
+          <div class="map-note">地图底图 © 高德地图。线路用于总览，不代表逐弯导航；实际道路、阿禾开放状态、景区交通和服务区营业情况仍以高德实时导航及“新疆路网”为准。</div>
         </div>
         <div class="route-strip"><strong>主线：</strong> 乌鲁木齐 <span>→ S21 / 乌伦古湖 →</span> 阿勒泰 <span>→ G681阿禾公路 →</span> 禾木 <span>→</span> 喀纳斯 <span>→ 五彩滩 →</span> 布尔津 <span>→ G3014 / 魔鬼城 →</span> 克拉玛依 <span>→ G30 →</span> 赛里木湖 <span>→ G30 →</span> 乌鲁木齐</div>
       </div>
@@ -545,21 +544,21 @@
 
           <article class="day-card"><div class="day-date"><div class="d">9/26</div><div class="w">D1 · 北上</div><button data-map-day="d1" type="button">地图定位</button></div><div class="day-content"><h3>乌鲁木齐 → S21 → 乌伦古湖 → 阿勒泰</h3><div class="day-summary"><span class="tag">500—540 km</span><span class="tag">纯驾驶6—7h</span><span class="tag">实际8.5—9.5h</span></div><figure class="day-photo"><img src="images/desert-road.jpg" alt="新疆荒漠公路穿过辽阔戈壁" loading="lazy" /><figcaption><strong>S21北上 · 从城市驶入荒漠</strong><span>乌伦古湖建议停留 14:30—15:00，限时30分钟</span></figcaption></figure><div class="day-cols"><ul class="timeline"><li>08:30取车，2名司机全部登记；采购水和路餐</li><li>09:00满油上S21，约11:00克拉美丽服务区午餐</li><li>13:30黄花沟或吉力湖短休、确认油量</li><li>14:30—15:00乌伦古湖短停，严格限时30分钟</li><li>17:30—18:30抵达阿勒泰</li></ul><aside class="day-aside"><p><b>住宿</b> 阿勒泰福朋喜来登 / 迎宾路亚朵</p><p><b>美食</b> 手抓肉、羊肉汤、包尔萨克、哈萨克奶茶</p><p><b>关键</b> S21部分荒漠路段无稳定信号，提前下载离线地图</p></aside></div></div></article>
 
-          <article class="day-card"><div class="day-date"><div class="d">9/27</div><div class="w">D2 · 景观公路</div><button data-map-day="d2" type="button">地图定位</button></div><div class="day-content"><h3>阿勒泰 → G681阿禾公路 → 禾木</h3><div class="day-summary"><span class="tag">210—230 km</span><span class="tag">纯驾驶5—6h</span><span class="tag">边走边拍7—9h</span></div><figure class="day-photo focus-low"><img src="images/hemu-morning.jpg" alt="秋季清晨俯瞰禾木村与金色白桦林" loading="lazy" /><figcaption><strong>阿禾公路终点 · 禾木河谷</strong><span>村庄炊烟 17:00—20:00</span></figcaption></figure><div class="day-cols"><ul class="timeline"><li>07:00阿勒泰满油出发，买好午餐和热水</li><li>08:00—14:00阿禾公路，以当天开放范围为准</li><li>入口、也克阿恰、181吊桥驿站短停（限15分钟）</li><li>14:00—15:30停车换乘、办理入住</li><li>15:30—20:00禾木桥、白桦林、河边炊烟</li></ul><aside class="day-aside"><p><b>住宿</b> 禾木村内现代木屋，仅住1晚</p><p><b>筛选</b> 地暖、独立卫浴、热水、行李接送、免费取消</p><p><b>备选</b> 阿禾关闭则经布尔津绕行禾木</p></aside></div></div></article>
+          <article class="day-card"><div class="day-date"><div class="d">9/27</div><div class="w">D2 · 景观公路</div><button data-map-day="d2" type="button">地图定位</button></div><div class="day-content"><h3>阿勒泰 → 阿禾公路 → 禾木白天游 → 贾登峪</h3><div class="day-summary"><span class="tag">230—260 km</span><span class="tag">纯驾驶5—6h</span><span class="tag">边走边拍8—10h</span></div><figure class="day-photo focus-low"><img src="images/hemu-morning.jpg" alt="秋季清晨俯瞰禾木村与金色白桦林" loading="lazy" /><figcaption><strong>禾木 · 白天游览不住宿</strong><span>老村炊烟 17:00—19:00</span></figcaption></figure><div class="day-cols"><ul class="timeline"><li>07:00阿勒泰满油出发，买好午餐和热水</li><li>08:00—14:00阿禾公路，以当天开放范围为准</li><li>入口、也克阿恰、181吊桥驿站短停（限15分钟）</li><li>14:00—17:00禾木桥、白桦林、老村漫步</li><li>17:00—19:00河边炊烟与金色河谷</li><li>19:00出发前往贾登峪，约1h车程</li></ul><aside class="day-aside"><p><b>住宿</b> 贾登峪镇酒店（非禾木村内，条件更好）</p><p><b>省钱</b> 禾木村内国庆¥1200-2800/间且评价一般，贾登峪约¥400-800/间</p><p><b>取舍</b> 放弃禾木清晨日出（晨雾概率<50%），保留傍晚炊烟</p><p><b>备选</b> 阿禾关闭则经布尔津绕行，直接住贾登峪</p></aside></div></div></article>
 
-          <article class="day-card"><div class="day-date"><div class="d">9/28</div><div class="w">D3 · 两个核心景区</div><button data-map-day="d3" type="button">地图定位</button></div><div class="day-content"><h3>禾木日出 → 贾登峪 → 喀纳斯湖</h3><div class="day-summary"><span class="tag">80—100 km</span><span class="tag">道路2—3h</span><span class="tag">含换乘8—10h</span></div><figure class="day-photo focus-top"><img src="images/kanas-river.jpg" alt="秋林环绕的喀纳斯河碧蓝河湾" loading="lazy" /><figcaption><strong>喀纳斯湖 · 当天下午的主景</strong><span>湖边栈道 15:00—19:00</span></figcaption></figure><div class="day-cols"><ul class="timeline"><li>07:20—09:00哈登观景台日出与晨雾（提前占位）</li><li>09:00早餐退房，立刻离开不停留</li><li>10:30左右乘车出景区取车</li><li>贾登峪补油至半箱以上，停车换区间车</li><li>14:00—19:00喀纳斯湖栈道；明确放弃观鱼台</li></ul><aside class="day-aside"><p><b>住宿</b> 喀纳斯新村优先，其次老村</p><p><b>美食</b> 土火锅、羊肉汤、酸奶、奶茶</p><p><b>原因</b> 住景区内才能次日赶早班区间车看三湾</p></aside></div></div></article>
+          <article class="day-card"><div class="day-date"><div class="d">9/28</div><div class="w">D3 · 喀纳斯第1晚</div><button data-map-day="d3" type="button">地图定位</button></div><div class="day-content"><h3>贾登峪 → 喀纳斯湖 · 从容第一天</h3><div class="day-summary"><span class="tag">40—60 km</span><span class="tag">道路1h</span><span class="tag">湖边下午+日落</span></div><figure class="day-photo focus-top"><img src="images/kanas-river.jpg" alt="秋林环绕的喀纳斯河碧蓝河湾" loading="lazy" /><figcaption><strong>喀纳斯湖 · 下午到湖边</strong><span>湖边栈道 14:00—19:00</span></figcaption></figure><div class="day-cols"><ul class="timeline"><li>08:30自然醒，贾登峪早餐后退房</li><li>09:30贾登峪补油至半箱以上，停车换区间车</li><li>11:00喀纳斯换乘中心，先入住新村放行李</li><li>14:00—19:00湖边栈道、湖边慢行与日落</li><li>19:30回新村，土火锅晚餐</li></ul><aside class="day-aside"><p><b>住宿</b> 喀纳斯新村（第1晚，共2晚）</p><p><b>美食</b> 土火锅、羊肉汤、酸奶、奶茶</p><p><b>优势</b> 不住禾木省下的精力，下午全给喀纳斯湖边</p></aside></div></div></article>
 
-          <article class="day-card"><div class="day-date"><div class="d">9/29</div><div class="w">D4 · 三湾与日落</div><button data-map-day="d4" type="button">地图定位</button></div><div class="day-content"><h3>喀纳斯三湾 → 五彩滩 → 布尔津</h3><div class="day-summary"><span class="tag">190—210 km</span><span class="tag">纯驾驶3.5—4.5h</span><span class="tag">全天9—11h</span></div><figure class="day-photo"><img src="images/rainbow-beach.jpg" alt="布尔津五彩滩的彩色雅丹地貌" loading="lazy" /><figcaption><strong>五彩滩 · 额尔齐斯河畔雅丹</strong><span>日落 17:30—20:00</span></figcaption></figure><div class="day-cols"><ul class="timeline"><li>07:30—10:00神仙湾、月亮湾（砍掉卧龙湾，景色重复）</li><li>三湾之间只走一段栈道，不全部徒步</li><li>11:30前必须出景区（硬时限），贾登峪加油午餐</li><li>15:00左右入住布尔津</li><li>17:30—20:00五彩滩日落；14:00后才出景区则放弃</li></ul><aside class="day-aside"><p><b>住宿</b> 友谊峰路或美食街附近，重停车、电梯、早餐</p><p><b>美食</b> 冷水鱼、五道黑、俄罗斯酸奶</p><p><b>避坑</b> 冷水鱼先问重量、单价和总价</p></aside></div></div></article>
+          <article class="day-card"><div class="day-date"><div class="d">9/29</div><div class="w">D4 · 喀纳斯第2晚</div><button data-map-day="d4" type="button">地图定位</button></div><div class="day-content"><h3>三湾晨雾 → 观鱼台 → 喀纳斯收尾</h3><div class="day-summary"><span class="tag">景区内</span><span class="tag">区间车为主</span><span class="tag">全天9—11h</span></div><figure class="day-photo focus-top"><img src="images/kanas-detail.jpg" alt="喀纳斯湖与山林倒影" loading="lazy" /><figcaption><strong>三湾晨雾 · 从容不赶路</strong><span>观鱼台视天气与体力</span></figcaption></figure><div class="day-cols"><ul class="timeline"><li>07:30—10:00神仙湾、月亮湾、卧龙湾晨雾</li><li>10:30回新村早餐休整</li><li>12:00—14:30观鱼台（1068级台阶，天气好才去）</li><li>15:00—17:00湖边栈道补拍或村里闲逛</li><li>17:00—19:00湖边日落</li></ul><aside class="day-aside"><p><b>住宿</b> 喀纳斯新村（第2晚，共2晚）</p><p><b>观鱼台</b> 排队严重，天气好再上；否则湖边发呆也值</p><p><b>从容</b> 不再赶时间出景区，慢节奏享受</p></aside></div></div></article>
 
-          <article class="day-card"><div class="day-date"><div class="d">9/30</div><div class="w">D5 · 雅丹地貌</div><button data-map-day="d5" type="button">地图定位</button></div><div class="day-content"><h3>布尔津 → 世界魔鬼城 → 克拉玛依</h3><div class="day-summary"><span class="tag">330—360 km</span><span class="tag">纯驾驶4.5—5.5h</span><span class="tag">实际8—10h</span></div><figure class="day-photo"><img src="images/devil-city.jpg" alt="乌尔禾世界魔鬼城雅丹地貌" loading="lazy" /><figcaption><strong>世界魔鬼城 · 风蚀雅丹</strong><span>游览 13:00—16:30</span></figcaption></figure><div class="day-cols"><ul class="timeline"><li>08:00布尔津满油出发（前一天没看成五彩滩可07:00去看日出）</li><li>11:30乌尔禾镇或服务区加油午餐</li><li>13:00—16:30正规世界魔鬼城、小火车游览</li><li>17:00离开，百口泉服务区短休</li><li>19:00左右抵达克拉玛依，加满油、洗车、检查轮胎</li></ul><aside class="day-aside"><p><b>住宿</b> 南环路亚朵或城市南侧同级酒店</p><p><b>美食</b> 椒麻鸡、丸子汤、抓饭、烤肉</p><p><b>安全</b> 不去无救援、无规范道路的野魔鬼城</p><p><b>备选</b> 前一天延误没去五彩滩，可今晨补看日出</p></aside></div></div></article>
+          <article class="day-card"><div class="day-date"><div class="d">9/30</div><div class="w">D5 · 出景区南下</div><button data-map-day="d5" type="button">地图定位</button></div><div class="day-content"><h3>喀纳斯 → 五彩滩日落 → 布尔津</h3><div class="day-summary"><span class="tag">190—210 km</span><span class="tag">纯驾驶3.5—4.5h</span><span class="tag">全天9—11h</span></div><figure class="day-photo"><img src="images/rainbow-beach.jpg" alt="布尔津五彩滩的彩色雅丹地貌" loading="lazy" /><figcaption><strong>五彩滩 · 额尔齐斯河畔雅丹</strong><span>日落 17:30—20:00</span></figcaption></figure><div class="day-cols"><ul class="timeline"><li>07:30—09:00喀纳斯晨景最后一眼</li><li>09:30早餐退房，收拾行李出景区</li><li>11:00出景区取车，贾登峪或冲乎尔加油午餐</li><li>14:30—15:00抵达布尔津，入住休整</li><li>17:30—20:00五彩滩日落；阴雨或延误则取消</li></ul><aside class="day-aside"><p><b>住宿</b> 友谊峰路或美食街附近，重停车、电梯、早餐</p><p><b>美食</b> 冷水鱼、五道黑、俄罗斯酸奶</p><p><b>避坑</b> 冷水鱼先问重量、单价和总价</p></aside></div></div></article>
 
-          <article class="day-card"><div class="day-date"><div class="d">10/1</div><div class="w">D6 · 向西抵湖</div><button data-map-day="d6" type="button">地图定位</button></div><div class="day-content"><h3>克拉玛依 → 精河 → 赛里木湖</h3><div class="day-summary"><span class="tag">460—500 km</span><span class="tag">纯驾驶6—6.5h</span><span class="tag">实际7.5—8.5h</span></div><figure class="day-photo"><img src="images/sayram-detail.jpg" alt="赛里木湖蓝色湖面与远处雪山" loading="lazy" /><figcaption><strong>赛里木湖 · 第一天看日落</strong><span>环湖 14:00—20:00</span></figcaption></figure><div class="day-cols"><ul class="timeline"><li>05:30—06:00克拉玛依满油出发，赶G30高峰前</li><li>08:00奎屯或乌苏休息，司机轮换</li><li>10:30精河服务区补油，车上简餐（国庆排队严重）</li><li>12:00五台服务区短休</li><li>14:00—20:00环湖第一段与日落</li></ul><aside class="day-aside"><p><b>住宿</b> 东门附近城际酒店 / 有供暖的营地（连住2晚）</p><p><b>美食</b> 高白鲑、羊肉、奶茶</p><p><b>关键</b> 国庆首日G30车流量大，提前2小时出发；入湖至少半箱油</p><p><b>备选</b> G30严重拥堵则住精河，10/2早上再进赛湖</p></aside></div></div></article>
+          <article class="day-card"><div class="day-date"><div class="d">10/1</div><div class="w">D6 · 雅丹地貌</div><button data-map-day="d6" type="button">地图定位</button></div><div class="day-content"><h3>布尔津 → 世界魔鬼城 → 克拉玛依</h3><div class="day-summary"><span class="tag">330—360 km</span><span class="tag">纯驾驶4.5—5.5h</span><span class="tag">实际8—10h</span></div><figure class="day-photo"><img src="images/devil-city.jpg" alt="乌尔禾世界魔鬼城雅丹地貌" loading="lazy" /><figcaption><strong>世界魔鬼城 · 风蚀雅丹</strong><span>游览 13:00—16:30</span></figcaption></figure><div class="day-cols"><ul class="timeline"><li>08:00布尔津满油出发（前一天没看成五彩滩可07:00去看日出）</li><li>11:30乌尔禾镇或服务区加油午餐</li><li>13:00—16:30正规世界魔鬼城、小火车游览</li><li>17:00离开，百口泉服务区短休</li><li>19:00左右抵达克拉玛依，加满油、洗车、检查轮胎</li></ul><aside class="day-aside"><p><b>住宿</b> 南环路亚朵或城市南侧同级酒店</p><p><b>美食</b> 椒麻鸡、丸子汤、抓饭、烤肉</p><p><b>安全</b> 不去无救援、无规范道路的野魔鬼城</p></aside></div></div></article>
 
-          <article class="day-card"><div class="day-date"><div class="d">10/2</div><div class="w">D7 · 赛湖全天</div><button data-map-day="d7" type="button">地图定位</button></div><div class="day-content"><h3>赛里木湖全天环湖 · 可选果子沟大桥</h3><div class="day-summary"><span class="tag">0—60 km</span><span class="tag">不赶路</span><span class="tag">全天自由活动</span></div><figure class="day-photo focus-low"><img src="images/sayram-50.jpg" alt="云层下的赛里木湖弧形湖岸与远山" loading="lazy" /><figcaption><strong>赛里木湖 · 完整一天不赶路</strong><span>全天环湖 · 可选果子沟大桥</span></figcaption></figure><div class="day-cols"><ul class="timeline"><li>07:30—09:30湖边晨景（住湖边的好处）</li><li>09:30—12:00补完剩余环湖段：西岸天鹅乐水、克勒涌珠</li><li>12:00—14:00回酒店午餐午休</li><li>14:00—17:00可选果子沟大桥（约30km，免费观景台拍大桥+雪山）</li><li>17:00—19:30湖边散步、看云看山、等日落</li></ul><aside class="day-aside"><p><b>住宿</b> 赛湖东门同一家酒店，连住第2晚</p><p><b>美食</b> 酒店餐厅或湖边简餐</p><p><b>放松</b> 不赶路，享受整个行程中最美的地方</p></aside></div></div></article>
+          <article class="day-card"><div class="day-date"><div class="d">10/2</div><div class="w">D7 · 向西抵湖</div><button data-map-day="d7" type="button">地图定位</button></div><div class="day-content"><h3>克拉玛依 → 精河 → 赛里木湖日落</h3><div class="day-summary"><span class="tag">460—500 km</span><span class="tag">纯驾驶6—6.5h</span><span class="tag">实际7.5—8.5h</span></div><figure class="day-photo"><img src="images/sayram-detail.jpg" alt="赛里木湖蓝色湖面与远处雪山" loading="lazy" /><figcaption><strong>赛里木湖 · 傍晚抵达看日落</strong><span>环湖 15:30—20:00</span></figcaption></figure><div class="day-cols"><ul class="timeline"><li>05:30—06:00克拉玛依满油出发，赶G30高峰前</li><li>08:00奎屯或乌苏休息，司机轮换</li><li>10:30精河服务区补油，车上简餐（国庆排队严重）</li><li>12:00五台服务区短休</li><li>13:30—15:30东门入住，环湖东段</li><li>15:30—20:00湖边日落与晚霞</li></ul><aside class="day-aside"><p><b>住宿</b> 东门附近城际酒店 / 有供暖的营地（仅1晚）</p><p><b>美食</b> 高白鲑、羊肉、奶茶</p><p><b>关键</b> 国庆期间G30车流量大，提前2小时出发；入湖至少半箱油</p><p><b>取舍</b> 为喀纳斯让出1天，赛湖只住1晚、日落+次晨景</p></aside></div></div></article>
 
-          <article class="day-card"><div class="day-date"><div class="d">10/3</div><div class="w">D8 · 从容返程</div><button data-map-day="d8" type="button">地图定位</button></div><div class="day-content"><h3>赛湖晨景 → 从容返乌鲁木齐</h3><div class="day-summary"><span class="tag">550—580 km</span><span class="tag">纯驾驶6.5—7.5h</span><span class="tag">全天9—10h</span></div><div class="day-cols"><ul class="timeline"><li>07:30—09:00湖边晨景（比原方案多30分钟）</li><li>09:30出发，不用像原方案那样赶</li><li>五台/精河正常休息，司机轮换</li><li>奎屯或乌苏午餐，石河子最后短休</li><li>17:00—18:00抵乌鲁木齐，加满油还车，住机场酒店</li></ul><aside class="day-aside"><p><b>住宿</b> 机场酒店，与首晚同一家更省事</p><p><b>晚餐</b> 机场片区简餐，不再进市区</p><p><b>优势</b> 10/3已是国庆尾声，返程车流比10/2少很多</p></aside></div></div></article>
+          <article class="day-card"><div class="day-date"><div class="d">10/3</div><div class="w">D8 · 返乌进城</div><button data-map-day="d8" type="button">地图定位</button></div><div class="day-content"><h3>赛湖晨景 → 市区还车 → 领馆巷夜市</h3><div class="day-summary"><span class="tag">550—580 km</span><span class="tag">纯驾驶6.5—7.5h</span><span class="tag">全天10—11h</span></div><div class="day-cols"><ul class="timeline"><li>07:30—09:00湖边晨景</li><li>09:30出发（提前出发，比原方案从容）</li><li>五台/精河正常休息，司机轮换</li><li>奎屯或乌苏午餐，石河子最后短休</li><li>16:30—17:00抵市区租车点还车（G30南侧进城，顺路）</li><li>17:30入住市区酒店，放行李</li><li>19:00—21:30领馆巷夜市晚餐</li></ul><aside class="day-aside"><p><b>住宿</b> 中山路/人民广场附近连锁酒店（非机场）</p><p><b>还车</b> 预订时确认市区门店还车；满油还车</p><p><b>晚餐</b> 领馆巷：烤包子、手抓饭、烤肉、格瓦斯；不进大巴扎</p><p><b>交通</b> 地铁1号线机场直达市区，市区用打车</p></aside></div></div></article>
 
-          <article class="day-card"><div class="day-date"><div class="d">10/4</div><div class="w">15:00起飞</div></div><div class="day-content"><h3>返程日 · 不再安排行程</h3><div class="day-summary"><span class="tag">11:30退房</span><span class="tag">12:00到机场</span><span class="tag">预留3h</span></div><div class="day-cols"><ul class="timeline"><li>睡到自然醒，酒店早餐</li><li>11:30退房前往机场</li><li>12:00办理值机、托运和安检</li><li>15:00起飞</li></ul><aside class="day-aside"><p><b>不安排</b> 新疆博物馆、大巴扎、和田二街和市区购物</p><p><b>原因</b> 国庆机场客流和道路拥堵不可控</p></aside></div></div></article>
+          <article class="day-card"><div class="day-date"><div class="d">10/4</div><div class="w">15:00起飞</div></div><div class="day-content"><h3>返程日 · 上午可选红山公园</h3><div class="day-summary"><span class="tag">10:30出发去机场</span><span class="tag">12:00到机场</span><span class="tag">预留3h</span></div><div class="day-cols"><ul class="timeline"><li>精力好：07:30—09:30红山公园（7点开门，俯瞰全城）</li><li>或睡到自然醒，酒店早餐</li><li>10:30出发，打车或地铁1号线去机场</li><li>12:00办理值机、托运和安检</li><li>15:00起飞</li></ul><aside class="day-aside"><p><b>上午可选</b> 红山公园（免费、近市区）；博物馆10点开门时间太紧</p><p><b>不安排</b> 大巴扎（人多排队）、市区购物</p><p><b>原因</b> 周日上午返程车流与机场客流仍偏多</p></aside></div></div></article>
         </div>
       </div>
     </section>
@@ -570,7 +569,7 @@
         <div class="service-table-wrap"><table><thead><tr><th>路段</th><th>首选补油</th><th>休息/卫生间</th><th>服务能力与注意事项</th></tr></thead><tbody>
           <tr><td><strong>S21 乌鲁木齐—阿勒泰</strong></td><td>乌鲁木齐满油；黄花沟或吉力湖补油</td><td>克拉美丽为主休息点</td><td>克拉美丽配套较完整；荒漠路段可能无信号，下载离线地图</td></tr>
           <tr><td><strong>G681 阿禾公路</strong></td><td>必须在阿勒泰加满</td><td>入口、也克阿恰、181吊桥驿站</td><td><span class="danger">沿线油站不作为唯一保障</span>；备午餐、热水，随时接受天气管制</td></tr>
-          <tr><td><strong>禾木—喀纳斯—布尔津</strong></td><td>贾登峪、冲乎尔、布尔津</td><td>景区游客中心、冲乎尔镇</td><td>禾木村内不作为可靠加油点；喀纳斯核心区靠区间车</td></tr>
+          <tr><td><strong>贾登峪—喀纳斯—布尔津</strong></td><td>贾登峪、冲乎尔、布尔津</td><td>景区游客中心、冲乎尔镇</td><td>禾木村内不作为可靠加油点；喀纳斯核心区靠区间车；贾登峪进景区前务必满油</td></tr>
           <tr><td><strong>G3014 布尔津—克拉玛依</strong></td><td>布尔津满油；乌尔禾补油</td><td>乌尔禾、百口泉、克南服务区</td><td>克拉玛依城市维修、轮胎、洗车服务最完整</td></tr>
           <tr><td><strong>G30 赛里木湖往返</strong></td><td>克拉玛依满油；精河补油</td><td>奎屯/乌苏、托托、精河、五台、石河子</td><td>国庆服务区可能排队；不把正餐完全押在一个服务区</td></tr>
         </tbody></table></div>
@@ -583,18 +582,18 @@
         <div class="section-head"><div><div class="kicker">STAY & EAT</div><h2>住在哪里，吃什么</h2></div><p class="section-intro">两组情侣每晚选择完全相同的房型和取消政策，住宿费用自然保持一致。山区优先保暖与热水，不为“网红景观房”牺牲睡眠。</p></div>
         <div class="stay-grid">
           <div class="stay-panel"><h3>9晚住宿目标</h3><div class="stay-list">
-            <div class="stay-row"><b>乌鲁木齐</b><span>9/25 + 10/3 · 机场片区</span><b>¥500—900/间</b></div>
+            <div class="stay-row"><b>乌鲁木齐</b><span>9/25机场 + 10/3市区</span><b>¥500—900/间</b></div>
             <div class="stay-row"><b>阿勒泰</b><span>市区新酒店或连锁</span><b>¥500—900/间</b></div>
-            <div class="stay-row"><b>禾木</b><span>村内1晚 · 地暖独卫</span><b>¥1200—2800/间</b></div>
-            <div class="stay-row"><b>喀纳斯</b><span>新村优先 · 赶早班车</span><b>¥1200—2500/间</b></div>
+            <div class="stay-row"><b>贾登峪</b><span>喀纳斯大门 · 替代禾木村内</span><b>¥400—800/间</b></div>
+            <div class="stay-row"><b>喀纳斯</b><span>新村连住2晚 · 三湾观鱼台</span><b>¥1200—2500/间</b></div>
             <div class="stay-row"><b>布尔津</b><span>有停车、电梯、早餐</span><b>¥350—700/间</b></div>
             <div class="stay-row"><b>克拉玛依</b><span>城市南侧方便上高速</span><b>¥400—700/间</b></div>
-            <div class="stay-row"><b>赛里木湖</b><span>东门连住2晚 · 确认供暖</span><b>¥900—2200/间</b></div>
-          </div><div class="room-rule"><strong>房间合计：</strong>9晚 × 2间 = 18间夜，约 ¥12,000—25,400；每对情侣承担一半，即约 ¥6,000—12,700。</div></div>
-          <div class="stay-panel"><h3>预订筛选顺序</h3><ol><li><strong>禾木：</strong>地暖、独立卫浴、热水、行李接送、免费取消。</li><li><strong>喀纳斯：</strong>新村/老村、距离换乘点、早班区间车便利。</li><li><strong>赛里木湖：</strong>东门、供暖、独卫、停车；不住清水河。</li><li><strong>城市酒店：</strong>停车、电梯、早餐、洗衣房，比景观更重要。</li><li><strong>两组公平：</strong>同房型、同早餐、同取消条件；若朝向不同则现场抽签。</li></ol></div>
+            <div class="stay-row"><b>赛里木湖</b><span>东门1晚 · 日落+晨景</span><b>¥900—2200/间</b></div>
+          </div><div class="room-rule"><strong>房间合计：</strong>9晚 × 2间 = 18间夜，约 ¥11,900—24,200；每对情侣承担一半，即约 ¥5,950—12,100。<strong>对比原方案省约¥1,000—3,000</strong>（禾木村内贵房换贾登峪）。</div></div>
+          <div class="stay-panel"><h3>预订筛选顺序</h3><ol><li><strong>喀纳斯：</strong>新村/老村、距离换乘点、早班区间车便利，连住2晚优先确认同房续住。</li><li><strong>贾登峪：</strong>离景区大门近、停车方便，替代禾木村内住宿。</li><li><strong>赛里木湖：</strong>东门、供暖、独卫、停车；不住清水河。</li><li><strong>城市酒店：</strong>停车、电梯、早餐、洗衣房，比景观更重要。</li><li><strong>两组公平：</strong>同房型、同早餐、同取消条件；若朝向不同则现场抽签。</li></ol></div>
         </div>
         <div class="food-grid" style="margin-top:22px">
-          <article class="food"><small>阿勒泰 / 禾木 / 喀纳斯</small><h3>山地热食</h3><p>手抓肉、羊肉汤、土火锅、哈萨克奶茶、酸奶、包尔萨克。景区午餐从简，晚上再点热菜。</p></article>
+          <article class="food"><small>阿勒泰 / 贾登峪 / 喀纳斯</small><h3>山地热食</h3><p>手抓肉、羊肉汤、土火锅、哈萨克奶茶、酸奶、包尔萨克。景区午餐从简，晚上再点热菜。</p></article>
           <article class="food"><small>布尔津</small><h3>额尔齐斯河味道</h3><p>冷水鱼、狗鱼或五道黑、俄罗斯风味酸奶。点鱼前确认重量、单价、做法和总价。</p></article>
           <article class="food"><small>克拉玛依</small><h3>城市补给夜</h3><p>椒麻鸡、牛骨髓丸子汤、抓饭、大盘鸡。第二天长途，晚餐不饮酒、不过量。</p></article>
           <article class="food"><small>赛里木湖</small><h3>湖畔简餐</h3><p>高白鲑、羊肉、奶茶。进入景区前准备热水、面包、水果和方便食品，防止晚间餐馆提早关门。</p></article>
@@ -605,17 +604,17 @@
     <section class="section" id="budget">
       <div class="container">
         <div class="section-head"><div><div class="kicker">BUDGET</div><h2>4人费用预算</h2></div><p class="section-intro">两组预算完全一致：整车公共费用四等分，每对情侣承担2人的门票餐饮，以及每晚1间同档房。</p></div>
-        <div class="budget-banner"><div class="budget-stat"><span>舒适型4人总预算</span><strong>¥40,000—48,000</strong></div><div class="budget-stat"><span>每组情侣</span><strong>¥20,000—24,000</strong></div><div class="budget-stat"><span>建议人均准备</span><strong>¥10,000—12,000</strong></div></div>
+        <div class="budget-banner"><div class="budget-stat"><span>舒适型4人总预算</span><strong>¥38,000—46,000</strong></div><div class="budget-stat"><span>每组情侣</span><strong>¥19,000—23,000</strong></div><div class="budget-stat"><span>建议人均准备</span><strong>¥9,500—11,500</strong></div></div>
         <div class="budget-table-wrap"><table><thead><tr><th>项目</th><th>4人合计</th><th>每组情侣</th><th>人均</th></tr></thead><tbody>
           <tr><td>租车及车辆保险（8天）</td><td>¥8,000—12,800</td><td>¥4,000—6,400</td><td>¥2,000—3,200</td></tr>
           <tr><td>油费（约228—264升）</td><td>¥1,600—2,100</td><td>¥800—1,050</td><td>¥400—525</td></tr>
           <tr><td>过路费</td><td>¥650—900</td><td>¥325—450</td><td>¥163—225</td></tr>
           <tr><td>停车费</td><td>¥250—450</td><td>¥125—225</td><td>¥63—113</td></tr>
-          <tr><td>住宿（18间夜）</td><td>¥12,000—25,400</td><td>¥6,000—12,700</td><td>¥3,000—6,350</td></tr>
+          <tr><td>住宿（18间夜）</td><td>¥11,900—24,200</td><td>¥5,950—12,100</td><td>¥2,975—6,050</td></tr>
           <tr><td>景区门票与区间车</td><td>¥2,600—3,600</td><td>¥1,300—1,800</td><td>¥650—900</td></tr>
           <tr><td>餐饮</td><td>¥8,000—12,000</td><td>¥4,000—6,000</td><td>¥2,000—3,000</td></tr>
           <tr><td>旅行保险、补给与机动</td><td>¥2,000—4,000</td><td>¥1,000—2,000</td><td>¥500—1,000</td></tr>
-          <tr><td><strong>估算合计</strong></td><td><strong>¥35,100—61,250</strong></td><td><strong>¥17,550—30,625</strong></td><td><strong>¥8,775—15,313</strong></td></tr>
+          <tr><td><strong>估算合计</strong></td><td><strong>¥35,000—59,750</strong></td><td><strong>¥17,500—29,875</strong></td><td><strong>¥8,750—14,938</strong></td></tr>
         </tbody></table></div>
         <p style="color:var(--muted);font-size:13px">不含往返新疆机票和购物。油价、租车价和国庆住宿属于浮动项；“舒适型目标”位于估算区间中部，并非最低价格。</p>
       </div>
@@ -626,12 +625,12 @@
         <div class="section-head"><div><div class="kicker">WEATHER & CLOTHING</div><h2>天气预估与穿衣方案</h2></div><p class="section-intro">9月底的北疆已经不是普通秋游：城市仍可能暖，禾木、喀纳斯与赛里木湖的清晨则要按冬季准备。</p></div>
         <div class="notice"><strong>先说结论：</strong>现在距离出发较远，无法给出逐日精确天气。下表是根据9月底至10月初常年季节特征制作的<strong>行李规划区间</strong>，不是2026年的正式预报；出发前7天开始逐日复核，山区以出发前24小时预警和现场交通管制为准。</div>
         <div class="service-table-wrap"><table class="weather-table"><thead><tr><th>日期 / 区域</th><th>行李规划温度</th><th>主要天气风险</th><th>当天穿法</th></tr></thead><tbody>
-          <tr><td>9/25、10/3—4<br>乌鲁木齐</td><td>约 6—18℃</td><td>昼夜温差大；冷空气来时降温快，返程晚间可能明显偏冷</td><td>长袖打底＋抓绒/针织＋防风外套；深夜落地和还车时备轻薄羽绒</td></tr>
+          <tr><td>9/25、10/3—4<br>乌鲁木齐</td><td>约 6—18℃</td><td>昼夜温差大；冷空气来时降温快，10/3夜市与10/4上午返程偏冷</td><td>长袖打底＋抓绒/针织＋防风外套；深夜落地、夜市和返程时备轻薄羽绒</td></tr>
           <tr><td>9/26<br>S21—阿勒泰</td><td>约 4—17℃</td><td>荒漠日晒、侧风；越往北越冷，服务区体感低</td><td>速干长袖＋抓绒＋冲锋衣，傍晚加轻薄羽绒；太阳镜与防晒</td></tr>
-          <tr><td>9/27<br>阿禾公路—禾木</td><td>约 -3—12℃</td><td>高海拔路段可能雨夹雪、积雪、结冰或临时关闭</td><td>保暖内衣＋抓绒＋羽绒＋防水硬壳；防水徒步鞋、帽子、手套随身</td></tr>
-          <tr><td>9/28—29<br>禾木—喀纳斯</td><td>约 -5—10℃</td><td>清晨霜冻、晨雾、雨雪；栈道湿滑，日照后体感又会升高</td><td>清晨厚羽绒＋硬壳＋保暖裤＋帽/手套；中午按“外壳—羽绒—抓绒”逐层脱</td></tr>
-          <tr><td>9/29—30<br>布尔津—克拉玛依</td><td>约 5—20℃</td><td>干燥、风大、紫外线强；魔鬼城无遮阴</td><td>长袖＋薄抓绒＋防风外套，厚外套放车内；遮阳帽、墨镜、润唇膏</td></tr>
-          <tr><td>10/1—3<br>赛里木湖</td><td>约 -4—10℃</td><td>湖边强风会显著拉低体感，可能湿雪、道路结冰或景区限行</td><td>保暖内衣＋抓绒＋厚羽绒＋防水硬壳；帽子、厚手套、防水鞋不可托运遗漏</td></tr>
+          <tr><td>9/27<br>阿禾公路—禾木—贾登峪</td><td>约 -3—12℃</td><td>高海拔路段可能雨夹雪、积雪、结冰或临时关闭；傍晚回贾登峪体感更低</td><td>保暖内衣＋抓绒＋羽绒＋防水硬壳；防水徒步鞋、帽子、手套随身</td></tr>
+          <tr><td>9/28—29<br>喀纳斯2晚</td><td>约 -5—10℃</td><td>清晨霜冻、晨雾、雨雪；栈道湿滑，日照后体感又会升高</td><td>清晨厚羽绒＋硬壳＋保暖裤＋帽/手套；中午按“外壳—羽绒—抓绒”逐层脱</td></tr>
+          <tr><td>9/30—10/1<br>布尔津—克拉玛依</td><td>约 5—20℃</td><td>干燥、风大、紫外线强；魔鬼城无遮阴</td><td>长袖＋薄抓绒＋防风外套，厚外套放车内；遮阳帽、墨镜、润唇膏</td></tr>
+          <tr><td>10/2—3<br>赛里木湖</td><td>约 -4—10℃</td><td>湖边强风会显著拉低体感，可能湿雪、道路结冰或景区限行</td><td>保暖内衣＋抓绒＋厚羽绒＋防水硬壳；帽子、厚手套、防水鞋不可托运遗漏</td></tr>
         </tbody></table></div>
         <div class="packing-grid">
           <article class="packing-card"><h3>每人核心衣物</h3><p>保暖/速干内层2套、抓绒1件、轻薄羽绒1件、厚羽绒1件、防水防风硬壳1件；长裤2条＋保暖秋裤1—2条。四层可组合，比只带一件厚外套更实用。</p></article>
@@ -646,8 +645,8 @@
       <div class="container">
         <div class="section-head"><div><div class="kicker">BOOKING & WEATHER</div><h2>预订顺序与改线规则</h2></div><p class="section-intro">山里天气决定路线，不是行程表决定天气。所有山区和湖区住宿都应选可免费取消。</p></div>
         <div class="check-grid">
-          <div class="check-panel"><h3>先订这六项</h3><ul class="checklist"><li>9/25深夜及10/3晚：同一家机场酒店</li><li>9/27禾木1晚：地暖、独卫、行李接送</li><li>9/28喀纳斯1晚：新村优先</li><li>10/1—10/2赛里木湖东门连住2晚及自驾票</li><li>9/26上午取、10/3晚还的中大型SUV</li><li>禾木、喀纳斯分时门票与区间车</li></ul></div>
-          <div class="check-panel"><h3>遇到天气这样改</h3><div class="weather-list"><div class="weather-item"><b>阿禾公路关闭：</b>改走阿勒泰—布尔津—禾木，压缩当天下午村内时间。</div><div class="weather-item"><b>禾木/喀纳斯降雪：</b>取消观鱼台和非必要徒步，按原日期撤往布尔津。</div><div class="weather-item"><b>10/1赛湖风雪：</b>不强行入湖，改住精河或奎屯，10/2再进赛湖。</div><div class="weather-item"><b>10/2天气恶化：</b>提前退房直接回乌鲁木齐，10/3还有一天缓冲。</div><div class="weather-item"><b>独库公路：</b>即使开放也不加入主线，避免把返程航班交给山区天气。</div></div></div>
+          <div class="check-panel"><h3>先订这六项</h3><ul class="checklist"><li>9/25机场酒店1晚</li><li>9/27贾登峪1晚：近景区大门、停车方便</li><li>9/28—29喀纳斯新村连住2晚：确认同房续住</li><li>10/2赛里木湖东门1晚及自驾票</li><li>10/3乌鲁木齐市区酒店1晚（中山路/人民广场附近）</li><li>9/26上午取、10/3市区还的中大型SUV</li><li>喀纳斯门票与区间车、禾木当日门票</li></ul></div>
+          <div class="check-panel"><h3>遇到天气这样改</h3><div class="weather-list"><div class="weather-item"><b>阿禾公路关闭：</b>改走阿勒泰—布尔津—禾木，压缩当天禾木白天时间，仍住贾登峪。</div><div class="weather-item"><b>喀纳斯降雪：</b>取消观鱼台和非必要徒步，湖边栈道改短线路。</div><div class="weather-item"><b>10/2赛湖风雪：</b>不强行入湖，改住精河或奎屯，10/3直接返乌。</div><div class="weather-item"><b>10/3返程天气差：</b>提前出发，领馆巷夜市改为机场或酒店附近简餐。</div><div class="weather-item"><b>独库公路：</b>即使开放也不加入主线，避免把返程航班交给山区天气。</div></div></div>
         </div>
       </div>
     </section>
@@ -701,37 +700,44 @@
 
   <footer><div class="container footer-grid"><div><h3>临行前最后核验</h3><p>出发前7天查看新疆交通运输厅国庆出行指南、“新疆路网”、阿禾公路与喀纳斯景区官方通知；每天早餐再核验当天道路、加油站和区间车状态。</p><p>地图坐标及驾驶时间用于方案规划，实时导航和现场交通管理优先。</p></div><div><h3>图片与资料</h3><p>Unsplash 图片：<a href="https://unsplash.com/photos/skpPlB2EgKI" target="_blank" rel="noreferrer">Fish SUN</a>、<a href="https://unsplash.com/photos/kk7tnPkQzDA" target="_blank" rel="noreferrer">Yang Song</a>、<a href="https://unsplash.com/photos/tzrLNkfDeZ8" target="_blank" rel="noreferrer">Hester Qiang</a>、<a href="https://unsplash.com/photos/4lexkjtU1wQ" target="_blank" rel="noreferrer">Chaojie</a>、<a href="https://unsplash.com/photos/Fl2mqgt5c0U" target="_blank" rel="noreferrer">Sammy Wong</a>。Wikimedia Commons 图片：<a href="https://commons.wikimedia.org/wiki/File:Lake_Sailimu,_aka_Sayram.jpg" target="_blank" rel="noreferrer">George Lu / CC BY 2.0</a>、<a href="https://commons.wikimedia.org/wiki/File:ColourfulBeach.jpg" target="_blank" rel="noreferrer">Fanghong / CC BY-SA 3.0</a>、<a href="https://commons.wikimedia.org/wiki/File:LakeKanas.jpg" target="_blank" rel="noreferrer">Fanghong / CC BY-SA 3.0</a>、<a href="https://commons.wikimedia.org/wiki/File:%E4%B9%8C%E4%BC%A6%E5%8F%A4%E6%B9%96_2012-08-20_(04).jpg" target="_blank" rel="noreferrer">HaziiDozen</a>。</p><p>新增实景素材：<a href="https://commons.wikimedia.org/wiki/File:Xinjiang_Hemu_Country_In_The_Morning_(HDR)_(7073380821).jpg" target="_blank" rel="noreferrer">lwtt93 / CC BY 2.0</a>、<a href="https://commons.wikimedia.org/wiki/File:DSC_-_Altay_-_Hemu_Valley_1.jpg" target="_blank" rel="noreferrer">CatOnMars / CC BY 4.0</a>、<a href="https://commons.wikimedia.org/wiki/File:Moon_Bay_on_Kanas_River,_Xinjiang,_China.jpg" target="_blank" rel="noreferrer">Yoshi Canopus / CC BY-SA 4.0</a>、<a href="https://commons.wikimedia.org/wiki/File:Xinjiang_DSC_1272_(11235736963).jpg" target="_blank" rel="noreferrer">lwtt93 / CC BY 2.0</a>、<a href="https://commons.wikimedia.org/wiki/Category:Lake_Sayram" target="_blank" rel="noreferrer">Tomskyhaha / CC BY-SA 4.0</a>、<a href="https://commons.wikimedia.org/wiki/File:Desert_highway.jpg" target="_blank" rel="noreferrer">Pravit / Public domain</a>、<a href="https://commons.wikimedia.org/wiki/File:Desert_landscape_on_the_315_national_highway_SILK_ROAD.jpg" target="_blank" rel="noreferrer">Bustamante.tung / CC BY-SA 4.0</a>。</p><p>版本：2026-08-01 · 4人 / 两组情侣 / 2名司机。</p></div></div></footer>
 
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+  <script>
+    window._AMapSecurityConfig = { securityJsCode: '59d47bcc1f346207a909700bc520c480' };
+  </script>
+  <script src="https://webapi.amap.com/maps?v=2.0&key=676568c358d60703ee29d25f717af64d"></script>
   <script>
     const routeDays = [
       { id: 'd1', date: '9/26', title: '乌鲁木齐—乌伦古湖—阿勒泰', km: '500—540 km', time: '6—7h', color: '#d87828', coords: [[43.826,87.617],[44.65,87.56],[45.42,87.48],[46.35,87.42],[47.16,87.52],[47.25,87.00],[47.85,88.13]] },
-      { id: 'd2', date: '9/27', title: '阿勒泰—阿禾公路—禾木', km: '210—230 km', time: '5—6h', color: '#3e7454', coords: [[47.85,88.13],[47.98,87.96],[48.13,87.78],[48.28,87.59],[48.43,87.48],[48.58,87.43]] },
-      { id: 'd3', date: '9/28', title: '禾木—贾登峪—喀纳斯', km: '80—100 km', time: '2—3h+换乘', color: '#d7a431', coords: [[48.58,87.43],[48.50,87.22],[48.49,87.10],[48.70,87.02]] },
-      { id: 'd4', date: '9/29', title: '喀纳斯—五彩滩—布尔津', km: '190—210 km', time: '3.5—4.5h', color: '#477f8a', coords: [[48.70,87.02],[48.49,87.10],[48.03,87.17],[47.91,86.86],[47.70,86.86]] },
-      { id: 'd5', date: '9/30', title: '布尔津—魔鬼城—克拉玛依', km: '330—360 km', time: '4.5—5.5h', color: '#9f4c32', coords: [[47.70,86.86],[47.10,86.65],[46.50,86.22],[46.13,85.70],[45.87,85.35],[45.58,84.89]] },
-      { id: 'd6', date: '10/1', title: '克拉玛依—赛里木湖', km: '460—500 km', time: '6—6.5h', color: '#76548c', coords: [[45.58,84.89],[44.43,84.90],[44.44,84.68],[44.66,83.58],[44.60,82.89],[44.62,82.11],[44.60,81.17]] },
-      { id: 'd7', date: '10/2', title: '赛里木湖全天环湖', km: '0—60 km', time: '自由活动', color: '#235f76', coords: [[44.60,81.17],[44.55,81.10],[44.50,81.05],[44.48,81.00],[44.50,81.08],[44.55,81.14],[44.60,81.17]] },
-      { id: 'd8', date: '10/3', title: '赛里木湖—乌鲁木齐', km: '550—580 km', time: '6.5—7.5h', color: '#6b4226', coords: [[44.60,81.17],[44.62,82.11],[44.60,82.89],[44.66,83.58],[44.43,84.90],[44.30,86.03],[44.17,86.85],[43.826,87.617]], dashed: true }
+      { id: 'd2', date: '9/27', title: '阿勒泰—阿禾—禾木—贾登峪', km: '230—260 km', time: '5—6h', color: '#3e7454', coords: [[47.85,88.13],[47.98,87.96],[48.13,87.78],[48.28,87.59],[48.43,87.48],[48.58,87.43],[48.49,87.10]] },
+      { id: 'd3', date: '9/28', title: '贾登峪—喀纳斯湖边', km: '40—60 km', time: '1h+换乘', color: '#d7a431', coords: [[48.49,87.10],[48.70,87.02]] },
+      { id: 'd4', date: '9/29', title: '喀纳斯三湾—观鱼台', km: '景区内', time: '区间车', color: '#477f8a', coords: [[48.70,87.02],[48.70,86.99],[48.69,86.97],[48.71,87.00]] },
+      { id: 'd5', date: '9/30', title: '喀纳斯—五彩滩—布尔津', km: '190—210 km', time: '3.5—4.5h', color: '#4d9f8c', coords: [[48.70,87.02],[48.49,87.10],[48.03,87.17],[47.91,86.86],[47.70,86.86]] },
+      { id: 'd6', date: '10/1', title: '布尔津—魔鬼城—克拉玛依', km: '330—360 km', time: '4.5—5.5h', color: '#9f4c32', coords: [[47.70,86.86],[47.10,86.65],[46.50,86.22],[46.13,85.70],[45.87,85.35],[45.58,84.89]] },
+      { id: 'd7', date: '10/2', title: '克拉玛依—赛里木湖日落', km: '460—500 km', time: '6—6.5h', color: '#76548c', coords: [[45.58,84.89],[44.43,84.90],[44.44,84.68],[44.66,83.58],[44.60,82.89],[44.62,82.11],[44.60,81.17]] },
+      { id: 'd8', date: '10/3', title: '赛里木湖—乌鲁木齐市区', km: '550—580 km', time: '6.5—7.5h', color: '#6b4226', coords: [[44.60,81.17],[44.62,82.11],[44.60,82.89],[44.66,83.58],[44.43,84.90],[44.30,86.03],[44.17,86.85],[43.826,87.617],[43.80,87.60]], dashed: true }
     ];
 
     const pois = [
-      {name:'乌鲁木齐机场酒店', type:'hotel', icon:'床', lat:43.90, lng:87.48, note:'9/25深夜与10/3晚，建议同一家酒店'},
-      {name:'乌鲁木齐取还车', type:'fuel', icon:'车', lat:43.88, lng:87.50, note:'9/26上午取车；10/3晚满油还车'},
+      {name:'乌鲁木齐机场酒店', type:'hotel', icon:'床', lat:43.90, lng:87.48, note:'9/25深夜1晚，机场接机'},
+      {name:'乌鲁木齐市区住宿', type:'hotel', icon:'床', lat:43.80, lng:87.60, note:'10/3晚：中山路/人民广场附近'},
+      {name:'领馆巷夜市', type:'sight', icon:'食', lat:43.785, lng:87.615, note:'10/3晚烤包子、手抓饭、烤肉、格瓦斯'},
+      {name:'红山公园', type:'sight', icon:'景', lat:43.807, lng:87.594, note:'10/4上午可选，7点开门俯瞰全城'},
+      {name:'乌鲁木齐取还车', type:'fuel', icon:'车', lat:43.79, lng:87.58, note:'9/26上午取车；10/3市区门店还车'},
       {name:'克拉美丽服务区', type:'service', icon:'休', lat:45.42, lng:87.48, note:'S21主休息点；午餐、卫生间、补给'},
       {name:'黄花沟服务区', type:'fuel', icon:'油', lat:46.05, lng:87.42, note:'S21补油备选，营业以当天为准'},
       {name:'吉力湖服务区', type:'fuel', icon:'油', lat:47.12, lng:87.50, note:'S21北段补油与休息节点'},
-      {name:'乌伦古湖', type:'sight', icon:'景', lat:47.25, lng:87.00, note:'途中短停30—60分钟，堵车则取消'},
+      {name:'乌伦古湖', type:'sight', icon:'景', lat:47.25, lng:87.00, note:'途中短停30分钟，堵车则取消'},
       {name:'阿勒泰住宿', type:'hotel', icon:'床', lat:47.85, lng:88.13, note:'市区住宿；出发前满油并采购路餐'},
       {name:'阿禾公路入口', type:'service', icon:'休', lat:47.98, lng:87.96, note:'卫生间与路况确认，进入前确保满油'},
       {name:'181吊桥驿站', type:'service', icon:'休', lat:48.28, lng:87.59, note:'仅作休息备选，不依赖沿线油站'},
-      {name:'禾木村', type:'hotel', icon:'床', lat:48.58, lng:87.43, note:'9/27住宿；傍晚村景与9/28日出'},
-      {name:'哈登观景台', type:'sight', icon:'景', lat:48.585, lng:87.424, note:'9/28 07:40—09:30晨雾与日出'},
-      {name:'贾登峪加油/停车', type:'fuel', icon:'油', lat:48.49, lng:87.10, note:'补至半箱以上，再停车换区间车'},
-      {name:'喀纳斯新村', type:'hotel', icon:'床', lat:48.70, lng:87.02, note:'9/28住宿；方便次日赶早班三湾'},
+      {name:'禾木村（白天游）', type:'sight', icon:'景', lat:48.58, lng:87.43, note:'9/27白天游+傍晚炊烟，不住宿'},
+      {name:'贾登峪住宿', type:'hotel', icon:'床', lat:48.49, lng:87.10, note:'9/27晚住宿；近喀纳斯大门，条件好'},
+      {name:'喀纳斯新村', type:'hotel', icon:'床', lat:48.70, lng:87.02, note:'9/28—29连住2晚；早班三湾+观鱼台'},
       {name:'神仙湾', type:'sight', icon:'景', lat:48.70, lng:86.99, note:'三湾晨景第一站'},
+      {name:'月亮湾', type:'sight', icon:'景', lat:48.69, lng:86.97, note:'标志性河湾，只走一段栈道'},
+      {name:'观鱼台', type:'sight', icon:'景', lat:48.71, lng:87.00, note:'9/29天气好再上，1068级台阶'},
       {name:'冲乎尔补给', type:'fuel', icon:'油', lat:48.03, lng:87.17, note:'加油、午餐、卫生间'},
-      {name:'五彩滩', type:'sight', icon:'景', lat:47.91, lng:86.86, note:'9/29日落；阴雨或延误则取消'},
-      {name:'布尔津住宿', type:'hotel', icon:'床', lat:47.70, lng:86.86, note:'9/29住宿；县城满油后出发'},
+      {name:'五彩滩', type:'sight', icon:'景', lat:47.91, lng:86.86, note:'9/30日落；阴雨或延误则取消'},
+      {name:'布尔津住宿', type:'hotel', icon:'床', lat:47.70, lng:86.86, note:'9/30住宿；县城满油后出发'},
       {name:'乌尔禾服务区', type:'fuel', icon:'油', lat:46.16, lng:85.74, note:'主加油点与午餐节点'},
       {name:'世界魔鬼城', type:'sight', icon:'景', lat:46.13, lng:85.70, note:'正规景区小火车，13:00—16:30'},
       {name:'百口泉服务区', type:'service', icon:'休', lat:45.91, lng:85.40, note:'前往克拉玛依途中短休'},
@@ -740,7 +746,7 @@
       {name:'托托服务区', type:'service', icon:'休', lat:44.66, lng:83.58, note:'G30返程休息节点'},
       {name:'精河服务区', type:'fuel', icon:'油', lat:44.60, lng:82.89, note:'往返湖区主补油、午餐节点'},
       {name:'五台服务区', type:'service', icon:'休', lat:44.62, lng:82.11, note:'进入/离开赛里木湖前最后短休'},
-      {name:'赛里木湖东门', type:'hotel', icon:'床', lat:44.60, lng:81.17, note:'10/1—10/2连住2晚；10/3早上从容离湖'},
+      {name:'赛里木湖东门', type:'hotel', icon:'床', lat:44.60, lng:81.17, note:'10/2晚住宿；日落+10/3晨景'},
       {name:'石河子服务区', type:'service', icon:'休', lat:44.30, lng:86.03, note:'返乌鲁木齐前最后主要休息节点'}
     ];
 
@@ -757,40 +763,51 @@
         tips: '<b>拍摄建议：</b>荒漠公路只在服务区或规范停车区拍摄，禁止应急车道停车。乌伦古湖下午偏侧光，人物站在湖岸侧前方，避免背光脸黑。'
       },
       d2: {
-        meta: '9月27日 · 210—230公里 · 景观公路7—9小时', title: 'G681阿禾公路与禾木傍晚',
+        meta: '9月27日 · 230—260公里 · 景观公路8—10小时', title: 'G681阿禾公路、禾木白天与贾登峪',
         images: [
           ['images/hemu-valley-2.jpg','阿勒泰山区高地俯瞰河谷','阿禾沿线 · 高地与河谷'],
           ['images/near-hemu.jpg','禾木附近金色白桦林与溪流','禾木河谷 · 白桦林溪流'],
-          ['images/hemu-morning.jpg','秋季清晨俯瞰禾木村','禾木村 · 金色晨景']
+          ['images/hemu-morning.jpg','禾木村白天景色','禾木村 · 白天游览']
         ],
-        schedule: [['07:00','阿勒泰满油，采购午餐和热水'],['08:00','进入阿禾公路，先确认当日通行范围'],['10:00','也克阿恰附近休息、拍照'],['12:00','181吊桥驿站简餐与卫生间（限15分钟）'],['14:00','到禾木入口，停车换乘'],['15:30','禾木桥—白桦林—河边炊烟']],
-        facts: [['主景','托勒海特草原、通巴盆地、雪山、禾木村'],['加油','只把阿勒泰满油作为可靠方案'],['补给','自带午餐和热水，驿站只作备选'],['住宿','禾木村内1晚，地暖独卫'],['穿衣','保暖内衣＋抓绒＋羽绒＋硬壳，防水鞋'],['备选','阿禾关闭改经布尔津绕行']],
-        tips: '<b>拍摄建议：</b>阿禾沿线遵守停车点和现场指引，不在弯道、窄路临停。禾木傍晚先拍桥与河，再上稍高位置等木屋炊烟。'
+        schedule: [['07:00','阿勒泰满油，采购午餐和热水'],['08:00','进入阿禾公路，先确认当日通行范围'],['10:00','也克阿恰附近休息、拍照'],['12:00','181吊桥驿站简餐与卫生间（限15分钟）'],['14:00','到禾木入口，停车换乘'],['14:30','禾木桥、白桦林、老村漫步'],['17:00','河边炊烟与金色河谷'],['19:00','出发前往贾登峪，约1h车程']],
+        facts: [['主景','托勒海特草原、通巴盆地、雪山、禾木村'],['住宿','贾登峪镇酒店（非禾木村内）'],['省钱','禾木村内国庆¥1200-2800/间且评价一般，贾登峪约¥400-800'],['取舍','放弃禾木清晨日出（晨雾概率<50%），保留傍晚炊烟'],['穿衣','保暖内衣＋抓绒＋羽绒＋硬壳，防水鞋'],['备选','阿禾关闭改经布尔津绕行']],
+        tips: '<b>拍摄建议：</b>阿禾沿线遵守停车点和现场指引，不在弯道、窄路临停。禾木傍晚炊烟大概率能看到，老村方向最佳；清晨机位不必强求。'
       },
       d3: {
-        meta: '9月28日 · 80—100公里 · 含换乘8—10小时', title: '禾木日出与喀纳斯湖',
+        meta: '9月28日 · 40—60公里 · 湖边下午+日落', title: '喀纳斯湖边第一天',
         images: [
           ['images/hemu.jpg','禾木村清晨河谷景色','禾木 · 晨雾与木屋'],
           ['images/kanas-unsplash.jpg','薄雾中喀纳斯湖岸与骑马牧民','喀纳斯湖 · 湖岸湿地'],
           ['images/kanas-outlet.jpg','喀纳斯湖出水口与林间栈道','喀纳斯 · 湖边栈道']
         ],
-        schedule: [['07:20','前往哈登观景台占位'],['07:40','看日出、晨雾与村庄全景'],['09:00','早餐后立刻退房离开'],['10:30','出景区取车，前往贾登峪'],['12:00','贾登峪补油、停车、换区间车'],['14:00','喀纳斯湖栈道'],['—','明确放弃观鱼台（排队1.5h+）']],
-        facts: [['主景','哈登观景台、禾木桥、喀纳斯湖'],['优先级','湖边栈道高于排队时间长的观鱼台'],['加油','贾登峪营业时补至半箱以上'],['住宿','喀纳斯新村优先'],['穿衣','清晨羽绒/冲锋衣，中午分层脱穿']],
-        tips: '<b>拍摄建议：</b>哈登观景台提前占位但不追网红机位；喀纳斯湖用人物作比例，广角拍湖湾，中长焦压缩雪山和森林层次。'
+        schedule: [['08:30','自然醒，贾登峪早餐后退房'],['09:30','贾登峪补油，停车换区间车'],['11:00','喀纳斯换乘中心，先入住新村放行李'],['12:00','新村午餐，稍作休整'],['14:00','湖边栈道、湖边慢行'],['18:00','湖边日落'],['19:30','回新村，土火锅晚餐']],
+        facts: [['主景','喀纳斯湖、湖边栈道、湖边日落'],['节奏','不赶禾木日出，睡够再出发'],['加油','贾登峪补至半箱以上'],['住宿','喀纳斯新村（第1晚，共2晚）'],['穿衣','清晨羽绒/冲锋衣，中午分层脱穿']],
+        tips: '<b>拍摄建议：</b>喀纳斯湖用人物作比例，广角拍湖湾，中长焦压缩雪山和森林层次。下午侧光时湖面层次最好。'
       },
       d4: {
-        meta: '9月29日 · 190—210公里 · 全天9—11小时', title: '喀纳斯三湾与五彩滩日落',
+        meta: '9月29日 · 景区内 · 三湾+观鱼台', title: '喀纳斯三湾与观鱼台',
         images: [
           ['images/kanas-detail.jpg','喀纳斯湖与山林倒影','神仙湾 · 晨雾方向'],
           ['images/moon-bay.jpg','喀纳斯河月亮湾全景','月亮湾 · 标志性河湾'],
-          ['images/rainbow-beach.jpg','布尔津五彩滩彩色雅丹','五彩滩 · 额尔齐斯河日落']
+          ['images/sayram-16.jpg','湖面与云层','观鱼台方向 · 远眺']
         ],
-        schedule: [['07:30','早班区间车前往神仙湾'],['08:30','月亮湾观景台，选择一段栈道徒步'],['10:00','返回换乘中心（砍掉卧龙湾）'],['11:30','硬时限：必须出景区'],['12:00','贾登峪/冲乎尔加油午餐'],['15:00','布尔津入住休息'],['17:30','五彩滩等日落']],
-        facts: [['主景','神仙湾、月亮湾、卧龙湾、五彩滩'],['徒步','三湾只走一段，不全程硬走'],['补给','冲乎尔午餐、卫生间、加油'],['住宿','布尔津县城，停车电梯优先'],['穿衣','清晨厚羽绒＋帽手套；下山后分层脱穿'],['取消条件','阴雨或延误超过1小时取消五彩滩']],
-        tips: '<b>拍摄建议：</b>三湾晨雾用中长焦；五彩滩日落前先拍地貌纹理，落日后留10—15分钟等蓝调，但不要拖到完全黑天。'
+        schedule: [['07:30','早班区间车前往神仙湾'],['08:30','月亮湾观景台，选择一段栈道徒步'],['09:30','卧龙湾远观'],['10:30','回新村早餐休整'],['12:00','出发前往观鱼台（1068级台阶）'],['14:30','观鱼台俯瞰喀纳斯湖全景'],['16:00','湖边栈道补拍或村里闲逛'],['18:00','湖边日落']],
+        facts: [['主景','神仙湾、月亮湾、卧龙湾、观鱼台'],['观鱼台','天气好才上，排队严重则放弃'],['住宿','喀纳斯新村（第2晚，共2晚）'],['节奏','不赶时间，慢节奏享受'],['穿衣','清晨厚羽绒＋帽手套；中午分层脱穿']],
+        tips: '<b>拍摄建议：</b>三湾晨雾用中长焦；观鱼台适合上午顺光俯瞰，带长焦拍湖湾全貌。'
       },
       d5: {
-        meta: '9月30日 · 330—360公里 · 实际8—10小时', title: '世界魔鬼城与克拉玛依',
+        meta: '9月30日 · 190—210公里 · 出景区+五彩滩日落', title: '喀纳斯出景区与五彩滩',
+        images: [
+          ['images/kanas-detail.jpg','喀纳斯湖与山林倒影','出景区前 · 最后晨景'],
+          ['images/rainbow-beach.jpg','布尔津五彩滩彩色雅丹','五彩滩 · 额尔齐斯河日落'],
+          ['images/desert-road.jpg','新疆荒漠公路','南下布尔津 · 公路']
+        ],
+        schedule: [['07:30','喀纳斯晨景最后一眼'],['09:30','早餐退房，收拾行李'],['11:00','出景区取车，贾登峪/冲乎尔加油午餐'],['14:30','抵达布尔津，入住休整'],['17:30','五彩滩等日落'],['20:00','回布尔津晚餐（冷水鱼）']],
+        facts: [['主景','出景区晨景、五彩滩日落'],['加油','贾登峪或冲乎尔补油'],['住宿','布尔津县城，停车电梯优先'],['晚餐','冷水鱼、五道黑；先问重量单价'],['取消条件','阴雨或延误超过1小时取消五彩滩']],
+        tips: '<b>拍摄建议：</b>五彩滩日落前先拍地貌纹理，落日后留10—15分钟等蓝调。'
+      },
+      d6: {
+        meta: '10月1日 · 330—360公里 · 实际8—10小时', title: '世界魔鬼城与克拉玛依',
         images: [
           ['images/devil-city.jpg','乌尔禾风蚀雅丹地貌','世界魔鬼城 · 雅丹主景'],
           ['images/desert-landscape-road.jpg','新疆荒漠与戈壁地貌','乌尔禾沿线 · 戈壁荒原'],
@@ -800,38 +817,27 @@
         facts: [['主景','风蚀雅丹、戈壁地貌、油城风光'],['景区选择','只去正规世界魔鬼城'],['加油','布尔津满油，乌尔禾主补油'],['住宿','克拉玛依城市南侧'],['穿衣','长袖＋薄抓绒＋防风外套，防晒防沙'],['晚餐','椒麻鸡、丸子汤；不饮酒']],
         tips: '<b>拍摄建议：</b>雅丹中午反差大，人物靠近岩体阴影边缘；使用小火车站点完成拍摄，不翻越围栏、不进入无救援野外区域。'
       },
-      d6: {
-        meta: '10月1日 · 460—500公里 · 实际7.5—8.5小时', title: '抵达赛里木湖与环湖日落',
+      d7: {
+        meta: '10月2日 · 460—500公里 · 赛湖日落', title: '抵达赛里木湖看日落',
         images: [
           ['images/sayram-16.jpg','赛里木湖辽阔湖面与云层','赛里木湖 · 湖面全景'],
           ['images/sayram-26.jpg','赛里木湖草甸、湖岸与山脉','亲水滩 · 湖岸草甸'],
           ['images/sayram-27.jpg','赛里木湖湖岸草原与高山','环湖西侧 · 山地层次']
         ],
-        schedule: [['05:30','克拉玛依满油出发，赶G30高峰前'],['08:00','奎屯或乌苏第一次休息换司机'],['10:30','精河服务区补油，车上简餐'],['12:00','五台服务区最后短休'],['14:00','东门入住并开始环湖'],['16:00','选择西侧开阔湖岸看日落，20:00前回酒店']],
-        facts: [['主景','亲水滩、克勒涌珠、点将台、湖畔日落'],['加油','精河补油，入湖至少半箱'],['补给','入湖前备热水、水果、面包'],['住宿','东门附近连住2晚，确认供暖独卫'],['穿衣','厚羽绒＋防水硬壳＋帽手套，防水鞋'],['风况','大风时远离浪边与临水湿滑区']],
+        schedule: [['05:30','克拉玛依满油出发，赶G30高峰前'],['08:00','奎屯或乌苏第一次休息换司机'],['10:30','精河服务区补油，车上简餐'],['12:00','五台服务区最后短休'],['13:30','东门入住'],['15:30','环湖东段'],['18:00','西侧开阔湖岸看日落，20:00前回酒店']],
+        facts: [['主景','亲水滩、点将台、湖畔日落'],['加油','精河补油，入湖至少半箱'],['住宿','东门附近1晚，确认供暖独卫'],['取舍','为喀纳斯让出1天，赛湖只住1晚（日落+次晨景）'],['穿衣','厚羽绒＋防水硬壳＋帽手套，防水鞋'],['风况','大风时远离浪边与临水湿滑区']],
         tips: '<b>拍摄建议：</b>下午顺着环湖方向找侧光，人物穿暖色外套更突出；湖边风大，三脚架降低高度并挂包增稳。'
       },
-      d7: {
-        meta: '10月2日 · 0—60公里 · 全天自由活动', title: '赛里木湖全天环湖',
-        images: [
-          ['images/sayram-08.jpg','云层下赛里木湖与木栈道','东门附近 · 清晨湖岸'],
-          ['images/sayram-34.jpg','赛里木湖亲水栈道与砾石湖岸','湖岸栈道 · 拍照位置参考'],
-          ['images/sayram-38.jpg','清澈赛里木湖近岸与草坡','湖岸近景 · 清澈见底']
-        ],
-        schedule: [['07:30','湖边晨景（住湖边的好处）'],['09:30','补完剩余环湖段：西岸天鹅乐水、克勒涌珠'],['12:00','回酒店午餐午休'],['14:00','可选果子沟大桥（约30km，免费观景台）'],['17:00','湖边散步、看云看山、等日落']],
-        facts: [['主景','全天环湖、天鹅乐水、克勒涌珠、可选果子沟'],['节奏','不赶路，享受行程最美的地方'],['住宿','东门同一家酒店，连住第2晚'],['穿衣','白天防风外套即可，傍晚加羽绒'],['安全','湖边风大，远离湿滑临水区']],
-        tips: '<b>拍摄建议：</b>上午侧光拍湖面层次，下午顺光拍清澈近岸。果子沟大桥用长焦压缩大桥与雪山。'
-      },
       d8: {
-        meta: '10月3日 · 550—580公里 · 从容返乌', title: '赛湖晨景与从容返程',
+        meta: '10月3日 · 550—580公里 · 返乌+领馆巷夜市', title: '赛湖晨景、市区还车与夜市',
         images: [
           ['images/sayram-50.jpg','云层下的赛里木湖弧形湖岸','离湖前 · 最后晨景'],
           ['images/desert-road.jpg','新疆荒漠公路','G30 · 返程高速'],
           ['images/sayram-16.jpg','赛里木湖辽阔湖面','赛湖 · 告别']
         ],
-        schedule: [['07:30','湖边晨景（比原方案多30分钟）'],['09:30','出发，不赶路'],['11:00','五台/精河确认油量并换司机'],['13:00','奎屯或乌苏午餐'],['16:00','石河子服务区最后短休'],['17:30','抵乌鲁木齐，加满油还车，住机场酒店']],
-        facts: [['主景','湖边最后晨景；返程不加新景点'],['优势','10/3已是国庆尾声，返程车流少'],['轮换','每人连续驾驶不超过2小时'],['住宿','机场酒店，与首晚同一家'],['穿衣','晨景按冬季穿；进车后脱厚羽绒再驾驶'],['底线','18:00前必须抵达乌鲁木齐']],
-        tips: '<b>拍摄建议：</b>晨景从容拍，不用赶时间。返程以安全和准时为唯一优先级。'
+        schedule: [['07:30','湖边晨景'],['09:30','出发返程'],['11:00','五台/精河确认油量并换司机'],['13:00','奎屯或乌苏午餐'],['16:00','石河子服务区最后短休'],['17:00','抵市区租车点还车（G30南侧进城顺路）'],['17:30','入住市区酒店放行李'],['19:00','领馆巷夜市晚餐']],
+        facts: [['主景','湖边最后晨景；返程不加新景点'],['还车','预订时确认市区门店还车；满油还车'],['住宿','中山路/人民广场附近连锁酒店'],['晚餐','领馆巷：烤包子、手抓饭、烤肉、格瓦斯'],['交通','市区用打车；10/4地铁1号线去机场'],['底线','17:00前抵市区，18:00前完成还车']],
+        tips: '<b>拍摄建议：</b>晨景从容拍。领馆巷夜市烟火气重，适合手机随手拍，别带大相机挤人。'
       }
     };
 
@@ -871,48 +877,137 @@
     document.getElementById('dialogClose').addEventListener('click', () => dayDialog.close());
     dayDialog.addEventListener('click', event => { if (event.target === dayDialog) dayDialog.close(); });
 
-    if (window.L) {
-      const map = L.map('routeMap', { zoomControl: true, scrollWheelZoom: false }).setView([45.7, 85.1], 5);
-      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { subdomains:'abc', maxZoom: 18, attribution: '&copy; OpenStreetMap contributors' }).addTo(map);
-      const routeLayer = L.layerGroup().addTo(map);
-      const groups = { sight: L.layerGroup(), hotel: L.layerGroup(), fuel: L.layerGroup(), service: L.layerGroup() };
-      Object.values(groups).forEach(group => group.addTo(map));
+    function wgs84ToGcj02(lng, lat) {
+      const PI = Math.PI;
+      const a = 6378245.0;
+      const ee = 0.00669342162296594323;
+      function outOfChina(lng, lat) { return lng < 72.004 || lng > 137.8347 || lat < 0.8293 || lat > 55.8271; }
+      function transformLat(x, y) {
+        let ret = -100.0 + 2.0 * x + 3.0 * y + 0.2 * y * y + 0.1 * x * y + 0.2 * Math.sqrt(Math.abs(x));
+        ret += (20.0 * Math.sin(6.0 * x * PI) + 20.0 * Math.sin(2.0 * x * PI)) * 2.0 / 3.0;
+        ret += (20.0 * Math.sin(y * PI) + 40.0 * Math.sin(y / 3.0 * PI)) * 2.0 / 3.0;
+        ret += (160.0 * Math.sin(y / 12.0 * PI) + 320 * Math.sin(y * PI / 30.0)) * 2.0 / 3.0;
+        return ret;
+      }
+      function transformLng(x, y) {
+        let ret = 300.0 + x + 2.0 * y + 0.1 * x * x + 0.1 * x * y + 0.1 * Math.sqrt(Math.abs(x));
+        ret += (20.0 * Math.sin(6.0 * x * PI) + 20.0 * Math.sin(2.0 * x * PI)) * 2.0 / 3.0;
+        ret += (20.0 * Math.sin(x * PI) + 40.0 * Math.sin(x / 3.0 * PI)) * 2.0 / 3.0;
+        ret += (150.0 * Math.sin(x / 12.0 * PI) + 300.0 * Math.sin(x / 30.0 * PI)) * 2.0 / 3.0;
+        return ret;
+      }
+      if (outOfChina(lng, lat)) return [lng, lat];
+      let dLat = transformLat(lng - 105.0, lat - 35.0);
+      let dLng = transformLng(lng - 105.0, lat - 35.0);
+      const radLat = lat / 180.0 * PI;
+      let magic = Math.sin(radLat);
+      magic = 1 - ee * magic * magic;
+      const sqrtMagic = Math.sqrt(magic);
+      dLat = (dLat * 180.0) / ((a * (1 - ee)) / (magic * sqrtMagic) * PI);
+      dLng = (dLng * 180.0) / (a / sqrtMagic * Math.cos(radLat) * PI);
+      return [lng + dLng, lat + dLat];
+    }
+
+    if (window.AMap) {
+      const map = new AMap.Map('routeMap', {
+        viewMode: '2D',
+        zoom: 5,
+        center: [85.1, 45.7],
+        mapStyle: 'amap://styles/whitesmoke',
+        scrollWheel: false,
+        showLabel: true
+      });
+      AMap.plugin(['AMap.ToolBar', 'AMap.Scale'], () => {
+        map.addControl(new AMap.ToolBar({ position: 'RT' }));
+        map.addControl(new AMap.Scale({ position: 'LB' }));
+      });
+
+      const infoWindow = new AMap.InfoWindow({
+        offset: new AMap.Pixel(0, -32),
+        autoMove: true
+      });
+
       const lines = {};
+      const poiMarkers = { sight: [], hotel: [], fuel: [], service: [] };
+      const lineOverlays = [];
+      const poiOverlays = [];
+
       routeDays.forEach(day => {
-        lines[day.id] = L.polyline(day.mapCoords, { color: day.color, weight: 5, opacity: .88, dashArray: day.dashed ? '10 10' : null, lineJoin: 'round' })
-          .bindPopup(`<strong>${day.date}｜${day.title}</strong><br>${day.km} · 纯驾驶${day.time}`)
-          .addTo(routeLayer);
+        const path = day.coords.map(c => { const [lng, lat] = wgs84ToGcj02(c[1], c[0]); return [lng, lat]; });
+        const line = new AMap.Polyline({
+          path,
+          strokeColor: day.color,
+          strokeWeight: 5,
+          strokeOpacity: 0.88,
+          strokeStyle: day.dashed ? 'dashed' : 'solid',
+          lineJoin: 'round',
+          cursor: 'pointer'
+        });
+        line.setExtData({ day });
+        line.on('click', () => { focusDay(day.id); });
+        lines[day.id] = line;
+        lineOverlays.push(line);
+        map.add(line);
       });
+
       pois.forEach(p => {
-        const icon = L.divIcon({ className: '', html: `<div class="poi-marker poi-${p.type}"><span>${p.icon}</span></div>`, iconSize: [29,29], iconAnchor: [14,28], popupAnchor: [0,-28] });
-        L.marker([p.mapLat,p.mapLng], {icon}).bindPopup(`<strong>${p.name}</strong><br>${p.note}`).addTo(groups[p.type]);
+        const [lng, lat] = wgs84ToGcj02(p.lng, p.lat);
+        const marker = new AMap.Marker({
+          position: [lng, lat],
+          content: `<div class="poi-marker poi-${p.type}"><span>${p.icon}</span></div>`,
+          offset: new AMap.Pixel(-14, -28),
+          zIndex: 120
+        });
+        marker.setExtData({ poi: p });
+        marker.on('click', () => {
+          infoWindow.setContent(`<strong>${p.name}</strong><br>${p.note}`);
+          infoWindow.open(map, marker.getPosition());
+        });
+        poiMarkers[p.type].push(marker);
+        poiOverlays.push(marker);
+        map.add(marker);
       });
-      const allBounds = L.latLngBounds(routeDays.flatMap(d => d.mapCoords));
-      map.fitBounds(allBounds, {padding:[30,30]});
+
+      const allOverlays = lineOverlays.concat(poiOverlays);
+      map.setFitView(allOverlays, false, [40, 40, 40, 40]);
 
       function focusDay(id) {
         const day = routeDays.find(d => d.id === id); if (!day) return;
         document.querySelectorAll('.day-map-item').forEach(el => el.classList.toggle('active', el.dataset.day === id));
-        Object.entries(lines).forEach(([key,line]) => line.setStyle({opacity:key===id?1:.18, weight:key===id?7:4}));
-        map.fitBounds(L.latLngBounds(day.mapCoords), {padding:[55,55], maxZoom:8});
-        setTimeout(() => lines[id].openPopup(), 350);
+        lineOverlays.forEach(line => {
+          const d = line.getExtData().day;
+          line.setOptions({
+            strokeOpacity: d.id === id ? 1 : 0.15,
+            strokeWeight: d.id === id ? 7 : 4
+          });
+        });
+        const path = lines[id].getPath().map(pt => [pt.getLng(), pt.getLat()]);
+        map.setFitView([lines[id]], false, [60, 60, 60, 60]);
+        const mid = path[Math.floor(path.length / 2)];
+        infoWindow.setContent(`<strong>${day.date}｜${day.title}</strong><br>${day.km} · 纯驾驶${day.time}`);
+        infoWindow.open(map, mid);
       }
+
       document.querySelectorAll('[data-day], [data-map-day]').forEach(btn => btn.addEventListener('click', () => {
         focusDay(btn.dataset.day || btn.dataset.mapDay);
-        if (btn.dataset.mapDay) document.getElementById('map').scrollIntoView({behavior:'smooth'});
+        if (btn.dataset.mapDay) document.getElementById('map').scrollIntoView({ behavior: 'smooth' });
       }));
       document.getElementById('fitAll').addEventListener('click', () => {
-        document.querySelectorAll('.day-map-item').forEach(el=>el.classList.remove('active'));
-        Object.values(lines).forEach(line=>line.setStyle({opacity:.88,weight:5}));
-        map.fitBounds(allBounds,{padding:[30,30]});
+        document.querySelectorAll('.day-map-item').forEach(el => el.classList.remove('active'));
+        lineOverlays.forEach(line => line.setOptions({ strokeOpacity: 0.88, strokeWeight: 5 }));
+        infoWindow.close();
+        map.setFitView(allOverlays, false, [40, 40, 40, 40]);
       });
       document.querySelectorAll('[data-layer]').forEach(btn => btn.addEventListener('click', () => {
         const type = btn.dataset.layer;
-        document.querySelectorAll('[data-layer]').forEach(el=>el.classList.toggle('active',el===btn));
-        Object.entries(groups).forEach(([key,group]) => { if(type==='all'||type===key) group.addTo(map); else map.removeLayer(group); });
+        document.querySelectorAll('[data-layer]').forEach(el => el.classList.toggle('active', el === btn));
+        Object.entries(poiMarkers).forEach(([key, markers]) => {
+          const show = type === 'all' || type === key;
+          markers.forEach(m => { if (show) map.add(m); else map.remove(m); });
+        });
       }));
     } else {
-      document.getElementById('routeMap').innerHTML = '<div style="padding:32px;color:#173f32"><strong>地图组件未加载。</strong><br>请联网后重新打开；下方每日路书仍可正常使用。</div>';
+      document.getElementById('routeMap').innerHTML = '<div style="padding:32px;color:#173f32"><strong>地图组件未加载。</strong><br>请检查网络后重新打开；下方每日路书仍可正常使用。</div>';
     }
   </script>
 </body>

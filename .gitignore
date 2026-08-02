@@ -34,3 +34,6 @@ next-env.d.ts
 
 # 工作区杂项
 work/
+
+# IDE 内部数据（不进入公开仓库）
+.codebuddy/
