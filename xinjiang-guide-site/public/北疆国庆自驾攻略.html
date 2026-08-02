@@ -925,10 +925,8 @@
         viewMode: '2D',
         zoom: 5,
         center: [85.1, 45.7],
-        mapStyle: 'amap://styles/normal',
         scrollWheel: false,
-        showLabel: true,
-        features: ['bg', 'road', 'building', 'point']
+        showLabel: true
       });
       AMap.plugin(['AMap.ToolBar', 'AMap.Scale'], () => {
         map.addControl(new AMap.ToolBar({ position: 'RT' }));
@@ -972,12 +970,7 @@
           content: `<div class="poi-marker poi-${p.type}" data-tip="${p.name}"><span>${p.icon}</span></div>`,
           offset: new AMap.Pixel(-14, -28),
           zIndex: 120,
-          title: p.name,
-          label: {
-            content: `<div class="poi-label">${p.name}</div>`,
-            direction: 'top',
-            offset: new AMap.Pixel(0, -8)
-          }
+          title: p.name
         });
         marker.setExtData({ poi: p });
         marker.on('click', () => {
