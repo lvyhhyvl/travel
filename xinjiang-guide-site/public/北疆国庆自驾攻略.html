@@ -1009,6 +1009,13 @@
     } else {
       document.getElementById('routeMap').innerHTML = '<div style="padding:32px;color:#173f32"><strong>地图组件未加载。</strong><br>请检查网络后重新打开；下方每日路书仍可正常使用。</div>';
     }
+
+    window.addEventListener('error', e => {
+      if (e && e.message && e.message.includes('INVALID_USER_DOMAIN')) {
+        const el = document.getElementById('routeMap');
+        el.innerHTML = '<div style="padding:32px;color:#a54b32"><strong>地图底图被拒绝加载（INVALID_USER_DOMAIN）</strong><br>请在<a href="https://console.amap.com/" target="_blank" rel="noreferrer">高德开放平台控制台</a>为当前域名添加白名单，再刷新页面。下方每日路书仍可正常使用。</div>';
+      }
+    }, true);
   </script>
 </body>
 </html>
