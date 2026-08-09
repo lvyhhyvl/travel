@@ -47,7 +47,10 @@ test("keeps the two downloadable guide files identical and corrected", async () 
   assert.match(guide, /牧马先生首选/);
   assert.match(guide, /酒店卸行李 → 一嗨还车/);
   assert.match(guide, /约90—120 km/);
+  assert.match(guide, /餐饮<\/td><td>¥5,000—7,000/);
+  assert.match(guide, /建议人均准备<\/span><strong>¥8,750—10,500/);
   assert.doesNotMatch(guide, /喀纳斯新村9\/28住1晚/);
+  assert.doesNotMatch(guide, /餐饮<\/td><td>¥8,000—12,000/);
   assert.doesNotMatch(guide, /已订部分约¥4,114\/间/);
   assert.doesNotMatch(guide, /class="sites-skeleton/);
 });
