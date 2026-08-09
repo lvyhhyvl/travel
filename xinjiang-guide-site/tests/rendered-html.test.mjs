@@ -1,13 +1,11 @@
 import assert from "node:assert/strict";
-import { access, readFile, readdir } from "node:fs/promises";
+import { access, readFile } from "node:fs/promises";
 import test from "node:test";
 
-const developmentPreviewMeta =
-  /<meta(?=[^>]*\bname=["']codex-preview["'])(?=[^>]*\bcontent=["']development["'])[^>]*>/i;
-const templateRoot = new URL("../", import.meta.url);
-const previewRoot = new URL("../app/_sites-preview/", import.meta.url);
+const projectRoot = new URL("../", import.meta.url);
+const publicRoot = new URL("../public/", import.meta.url);
 
-async function render() {
+async function renderRoot() {
   const workerUrl = new URL("../dist/server/index.js", import.meta.url);
   workerUrl.searchParams.set("test", `${process.pid}-${Date.now()}`);
   const { default: worker } = await import(workerUrl.href);
@@ -15,6 +13,7 @@ async function render() {
   return worker.fetch(
     new Request("http://localhost/", {
       headers: { accept: "text/html" },
+      redirect: "manual",
     }),
     {
       ASSETS: {
@@ -28,64 +27,42 @@ async function render() {
   );
 }
 
-test("server-renders the starter loading skeleton", async () => {
-  const response = await render();
-  assert.equal(response.status, 200);
-  assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
-
-  const html = await response.text();
-  assert.match(html, developmentPreviewMeta);
-  assert.match(html, /<title>Your site is taking shape<\/title>/i);
-  assert.match(html, /Building your site/);
-  assert.match(html, /Your site is taking shape/);
-  assert.match(
-    html,
-    /Your first version will appear here automatically when it’s ready\./,
-  );
-  assert.doesNotMatch(html, /Codex/);
-  assert.match(html, /react-loading-skeleton/);
-  assert.match(html, /role="status"/);
+test("root opens the finished travel guide", async () => {
+  const response = await renderRoot();
+  assert.ok([301, 302, 303, 307, 308].includes(response.status));
+  const location = response.headers.get("location");
+  assert.ok(location);
+  assert.equal(new URL(location, "http://localhost").pathname, "/index.html");
 });
 
-test("keeps the loading skeleton scoped and disposable", async () => {
-  const [preview, css, page, layout, packageJson, files] = await Promise.all([
-    readFile(new URL("SkeletonPreview.tsx", previewRoot), "utf8"),
-    readFile(new URL("preview.css", previewRoot), "utf8"),
-    readFile(new URL("../app/page.tsx", import.meta.url), "utf8"),
-    readFile(new URL("../app/layout.tsx", import.meta.url), "utf8"),
-    readFile(new URL("../package.json", import.meta.url), "utf8"),
-    readdir(previewRoot),
+test("keeps the two downloadable guide files identical and corrected", async () => {
+  const [guide, namedCopy] = await Promise.all([
+    readFile(new URL("index.html", publicRoot), "utf8"),
+    readFile(new URL("北疆国庆自驾攻略.html", publicRoot), "utf8"),
   ]);
 
-  assert.deepEqual(files.sort(), ["SkeletonPreview.tsx", "preview.css"]);
-  assert.match(preview, /from "react-loading-skeleton"/);
-  assert.match(preview, /baseColor="#eceae7"/);
-  assert.match(preview, /highlightColor="#f9f8f6"/);
-  assert.match(preview, /duration=\{2\.8\}/);
-  assert.match(preview, /sites-skeleton-search-placeholder/);
-  assert.match(packageJson, /"react-loading-skeleton": "3\.5\.0"/);
+  assert.equal(namedCopy, guide);
+  assert.match(guide, /喀纳斯老村优先/);
+  assert.match(guide, /鸿腾旅途首选/);
+  assert.match(guide, /牧马先生首选/);
+  assert.match(guide, /酒店卸行李 → 一嗨还车/);
+  assert.match(guide, /约90—120 km/);
+  assert.doesNotMatch(guide, /喀纳斯新村9\/28住1晚/);
+  assert.doesNotMatch(guide, /已订部分约¥4,114\/间/);
+  assert.doesNotMatch(guide, /class="sites-skeleton/);
+});
 
-  const shellIndex = preview.indexOf('className="sites-skeleton-shell"');
-  const statusIndex = preview.indexOf('className="sites-skeleton-status"');
-  assert.ok(shellIndex >= 0 && statusIndex > shellIndex);
-  assert.match(css, /position:\s*fixed/);
-  assert.match(css, /inset:\s*0/);
-  assert.match(css, /opacity:\s*0\.52/);
-  assert.match(css, /prefers-reduced-motion:\s*reduce/);
-  assert.doesNotMatch(css, /#020617|canvas|pets|progress/i);
-  assert.doesNotMatch(
-    preview,
-    /loading-spinner|status-mark|status-progress|canvas|cookie|random/i,
+test("all local guide images exist", async () => {
+  const guide = await readFile(new URL("index.html", publicRoot), "utf8");
+  const imagePaths = [...guide.matchAll(/<img\s+[^>]*src=["']([^"']+)["']/gi)]
+    .map((match) => match[1])
+    .filter((src) => !/^(?:https?:|data:)/i.test(src) && !src.includes("${"));
+
+  assert.ok(imagePaths.length > 0);
+  await Promise.all(
+    [...new Set(imagePaths)].map((src) => access(new URL(src, publicRoot))),
   );
-
-  assert.match(page, /export const metadata:\s*Metadata/);
-  assert.match(page, /"codex-preview": "development"/);
-  assert.match(page, /<SkeletonPreview \/>/);
-  assert.match(layout, /title:\s*"Starter Project"/);
-  assert.doesNotMatch(layout, /codex-preview|_sites-preview|themeColor|\bViewport\b/);
-  assert.doesNotMatch(css, /(^|\s)(html|body)\s*\{/m);
-
   await assert.rejects(
-    access(new URL("public/_sites-preview", templateRoot)),
+    access(new URL("app/_sites-preview/SkeletonPreview.tsx", projectRoot)),
   );
 });
